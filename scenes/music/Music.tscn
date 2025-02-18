@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk3ej2jgkgpdr"]
+
+[ext_resource type="AudioStream" uid="uid://coxrcdrdq8x3p" path="res://assets/music/placeholder_mainmenu_BG.mp3" id="1_q2wlk"]
+[ext_resource type="Script" path="res://scripts/autoload/Music.gd" id="2_n0jdn"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_q2wlk")
+bus = &"BGM"
+parameters/looping = true
+script = ExtResource("2_n0jdn")

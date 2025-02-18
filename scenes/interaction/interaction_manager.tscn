@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://chy3s4mm1w5f8"]
+
+[ext_resource type="Script" path="res://scripts/gameplay/interaction/interaction_manager.gd" id="1_ea0w1"]
+[ext_resource type="FontFile" uid="uid://dxdarhen86t2h" path="res://assets/fonts/Minecraft-Regular.otf" id="2_eab5i"]
+[ext_resource type="Texture2D" uid="uid://bopabcn6ww087" path="res://assets/ui/npc_indicator/dialogue.png" id="3_ic2ob"]
+[ext_resource type="Texture2D" uid="uid://bysayb6oawrjc" path="res://assets/ui/npc_indicator/lesson.png" id="4_rh3tj"]
+
+[node name="InteractionManager" type="Node2D"]
+script = ExtResource("1_ea0w1")
+
+[node name="Label" type="Label" parent="."]
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -52.5
+offset_right = 52.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_eab5i")
+theme_override_font_sizes/font_size = 10
+text = "Tap to Interact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NpcIndicator" type="Node2D" parent="."]
+z_index = 20
+
+[node name="Dialogue" type="Sprite2D" parent="NpcIndicator"]
+visible = false
+texture = ExtResource("3_ic2ob")
+offset = Vector2(0, 8)
+
+[node name="Item" type="Sprite2D" parent="NpcIndicator"]
+visible = false
+texture = ExtResource("4_rh3tj")
+offset = Vector2(0, 8)

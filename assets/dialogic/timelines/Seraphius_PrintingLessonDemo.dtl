@@ -1,0 +1,32 @@
+[style name="TutorialStyle"]
+label RetryPoint
+Now, in order to cast the [b]print()[/b], all you have to do is write it below the [b]main()[/b] function.
+[signal arg="print_code1"]
+For example, I've written here [b]print('Hello, World!')[/b]
+When we run this script, we will get an output of [signal=print_output1]'Hello, World!' below
+As you can see, whatever is written within the parenthesis of the [b]print()[/b] function, it will be printed back by Python!
+One thing to also remember is that each call of the [b]print()[/b] makes use of one line!
+[signal arg="print_code2"]
+For this example, we will make use of 2 [b]print()[/b] functions
+When we run this script, we will get an output of [signal=print_output2]'Hello, World!' followed in the next line by 'Welcome to Code Quest!'
+Now, when printing separate lines, we don't necessarily have to use multiple [b]print()[/b] statements!
+[signal arg="print_code3"]
+We can achieve the same output as before, printing 2 different lines, by using only 1 [b]print()[/b] function!
+We can make use of the [b]\n[/b] special character to indicate a new line within the same print() call!
+So now, if we run this script, we will get [signal=print_output3]'Hello,' followed in the next line by 'World!'
+Using the 'print()' function isn't limited to just words!
+We can output numbers using the 'print()' function too!'
+[signal arg="print_code4"]
+We can use either the '+' symbol, or a comma!
+First I will write the number of elders inside our Academe using the '+' symbol!
+Next, I will write the numebr of students using the comma
+We will get an output of[signal=print_output4][br][br]'Elders: 3'[br]and[br]'Students: 6'!
+Now, is this clear to everyone in the class, or do I need to repeat it?
+- Yup, looks good to me!
+	Now, I want you all to try it for yourselves!
+	I've set the instructions and test cases on each of your journals to follow!
+	[i]The Instructions and Test Cases have been updated! Press the 'View Instructions and Cases' button for more information![/i]
+	[end_timeline]
+- Err, can you repeat it to me?
+	Okay, I'll repeat the lesson for everyone, so listen close!
+	jump RetryPoint

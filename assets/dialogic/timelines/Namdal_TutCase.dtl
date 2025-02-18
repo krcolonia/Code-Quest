@@ -1,0 +1,15 @@
+[style name="TutorialStyle"]
+When you press that button, this panel slides down and shows a button and these 2 boxes!
+label RetryPoint
+The button at the very top allows you to replay the lesson connected with the activity.
+The box on top gives you the problem you're solving and instructions to consider when scripting!
+The box below shows the test cases you need to consider, and the expected output of each case.
+These cases ensure that your script is flexible to different conditions!
+So, that's about it! Is everything clear to you now or you'd want me to run it down again?
+- Yup, looks good to me!
+	Alright! Now that we got the basics down, I think you're ready to get that [b]identification seal[/b]!
+	Since you're just getting started and have no experience yet, I'll make your Identification Seal! Walk over to the Lectern to the Right so I can show you!
+	[end_timeline]
+- Err, can you repeat it to me?
+	Alright, I'll start from the beginning!
+	jump RetryPoint

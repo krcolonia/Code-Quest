@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dti1lsxpy6uok"]
+
+[ext_resource type="Texture2D" uid="uid://ckmka8s08c8la" path="res://assets/background/PauseMenuBG.png" id="1_oraq5"]
+
+[resource]
+texture = ExtResource("1_oraq5")
+texture_margin_left = 80.0
+texture_margin_top = 64.0
+texture_margin_right = 80.0
+texture_margin_bottom = 64.0

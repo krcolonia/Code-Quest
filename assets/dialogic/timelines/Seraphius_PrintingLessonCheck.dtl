@@ -1,0 +1,16 @@
+[i]You approach Elder Seraphius to the front of the class.[/i]
+if {user_var.gender} == "Female":
+	join MC_Female 1
+else:
+	join MC_Male 1
+MainCharacter_Name: Elder Seraphius, I have done the activity you've given us today.[br][br]I think I was able to make use of the print() casting successfully!
+if {user_var.gender} == "Female":
+	leave MC_Female 
+else:
+	leave MC_Male 
+join ElderSeraphius 0
+ElderSeraphius: Very well young one, let me see your journal!
+[i]You hand over your journal to Elder Seraphius[/i]
+ElderSeraphius: Hmm, very well done {user_var.username}![br][br]It seems that Namdal has done a good job as well in teaching you the basics of your journal!
+ElderSeraphius: You have a good grasp of working with Python, much like your father!
+ElderSeraphius: Now! Return to your lectern, we'll proceed with the next lesson!

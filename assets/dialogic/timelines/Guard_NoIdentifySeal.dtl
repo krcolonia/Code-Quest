@@ -1,0 +1,30 @@
+[i]As you approach the Academe, you were stopped on your tracks by a Guard of the Order[/i]
+join Guard1 0
+Guard1: Halt! Who goes there?
+leave Guard1
+if {user_var.gender} == "Female":
+	join MC_Female 1
+else:
+	join MC_Male 1
+MainCharacter_Name: I'm a new apprentice for the Order of the Scribes, today's my first day!
+if {user_var.gender} == "Female":
+	leave MC_Female
+else:
+	leave MC_Male
+join Guard1 0
+Guard1: Where's your [b]identification seal[/b]?
+leave Guard1
+if {user_var.gender} == "Female":
+	join MC_Female 1
+else:
+	join MC_Male 1
+MainCharacter_Name: My [b]identification seal[/b]? I don't have that yet...
+if {user_var.gender} == "Female":
+	leave MC_Female
+else:
+	leave MC_Male
+join Guard1 0
+Guard1: Well then, no [b]identification seal[/b], no entry!
+leave Guard1
+MainCharacter_Name: [i]Hmm, this must be what Mother has told me to get from [b]Namdal[/b]...[/i]
+MainCharacter_Name: [i]I better head over to [b]Namdal's Tavern[/b] before coming back here![/i]

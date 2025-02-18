@@ -1,0 +1,139 @@
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://8ljahhyhocjx"]
+
+[ext_resource type="FontFile" uid="uid://bgy5jtbhxp65x" path="res://assets/fonts/AtlantisText-Bold.ttf" id="1_4yubr"]
+[ext_resource type="Texture2D" uid="uid://m43rslry20ic" path="res://assets/ui/buttons/normal_button.png" id="2_psjot"]
+[ext_resource type="Texture2D" uid="uid://cq3r6li144jgt" path="res://assets/ui/buttons/pressed_button.png" id="3_1ut34"]
+[ext_resource type="Texture2D" uid="uid://y62rjv8so4jh" path="res://assets/ui/checkbox/check_round_grey_circle.png" id="4_okx3l"]
+[ext_resource type="FontFile" uid="uid://dn8jthylka01q" path="res://assets/fonts/AtlantisHeadline-Bold.ttf" id="5_3ein5"]
+[ext_resource type="Texture2D" uid="uid://q682h7qmstcl" path="res://assets/ui/checkbox/check_round_grey.png" id="5_ynw76"]
+[ext_resource type="FontFile" uid="uid://dxdarhen86t2h" path="res://assets/fonts/Minecraft-Regular.otf" id="6_771ow"]
+[ext_resource type="Texture2D" uid="uid://c2ih08t74tjfr" path="res://assets/ui/textbox/textbox_v1.png" id="7_0jr3w"]
+[ext_resource type="Texture2D" uid="uid://brb2xmwb2ltky" path="res://assets/background/InputMenuBG.png" id="8_hc5je"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ti3f"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3qynt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3k17u"]
+texture = ExtResource("2_psjot")
+texture_margin_left = 22.0
+texture_margin_top = 17.0
+texture_margin_right = 23.0
+texture_margin_bottom = 33.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebx32"]
+texture = ExtResource("2_psjot")
+texture_margin_left = 22.0
+texture_margin_top = 17.0
+texture_margin_right = 23.0
+texture_margin_bottom = 33.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3j4eq"]
+texture = ExtResource("3_1ut34")
+texture_margin_left = 22.3321
+texture_margin_top = 21.9992
+texture_margin_right = 22.0
+texture_margin_bottom = 28.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0872s"]
+bg_color = Color(0, 0, 0, 0.529412)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 15
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ajojm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mw7s1"]
+content_margin_left = 45.0
+content_margin_top = 25.0
+content_margin_bottom = 33.0
+texture = ExtResource("7_0jr3w")
+texture_margin_left = 46.0
+texture_margin_top = 46.0
+texture_margin_right = 46.0
+texture_margin_bottom = 46.0
+expand_margin_top = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0i4t7"]
+texture = ExtResource("8_hc5je")
+texture_margin_left = 48.0
+texture_margin_top = 48.0
+texture_margin_right = 48.0
+texture_margin_bottom = 48.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qc6mf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d28i6"]
+texture = ExtResource("7_0jr3w")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gfrr4"]
+
+[resource]
+default_font_size = 30
+Button/colors/font_color = Color(0, 0, 0, 0.745098)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0, 0, 0, 0.745098)
+Button/colors/font_hover_color = Color(0, 0, 0, 0.745098)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 0.745098)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 28
+Button/fonts/font = ExtResource("1_4yubr")
+Button/styles/disabled = SubResource("StyleBoxFlat_8ti3f")
+Button/styles/focus = SubResource("StyleBoxEmpty_3qynt")
+Button/styles/hover = SubResource("StyleBoxTexture_3k17u")
+Button/styles/normal = SubResource("StyleBoxTexture_ebx32")
+Button/styles/pressed = SubResource("StyleBoxTexture_3j4eq")
+HSlider/icons/grabber = ExtResource("4_okx3l")
+HSlider/icons/grabber_disabled = ExtResource("5_ynw76")
+HSlider/icons/grabber_highlight = ExtResource("4_okx3l")
+HSlider/styles/slider = SubResource("StyleBoxFlat_0872s")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 26
+Label/fonts/font = ExtResource("5_3ein5")
+LineEdit/colors/caret_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+LineEdit/font_sizes/font_size = 35
+LineEdit/fonts/font = ExtResource("6_771ow")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_ajojm")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_mw7s1")
+Panel/styles/panel = SubResource("StyleBoxTexture_0i4t7")
+PopupMenu/styles/hover = SubResource("StyleBoxEmpty_qc6mf")
+PopupMenu/styles/panel = SubResource("StyleBoxTexture_d28i6")
+PopupPanel/styles/panel = SubResource("StyleBoxEmpty_gfrr4")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/constants/line_separation = -12
+RichTextLabel/font_sizes/bold_font_size = 26
+RichTextLabel/font_sizes/bold_italics_font_size = 26
+RichTextLabel/font_sizes/italics_font_size = 26
+RichTextLabel/font_sizes/mono_font_size = 26
+RichTextLabel/font_sizes/normal_font_size = 26
+RichTextLabel/fonts/normal_font = ExtResource("5_3ein5")

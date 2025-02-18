@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://btkajnikr21jf"]
+
+[ext_resource type="FontFile" uid="uid://qd7ycd7kkcx5" path="res://assets/fonts/Minecraft-Bold.otf" id="1_b62nl"]
+[ext_resource type="FontFile" uid="uid://d2k3ly52ewntf" path="res://assets/fonts/Minecraft-Italic.otf" id="2_ts0py"]
+[ext_resource type="FontFile" uid="uid://dxdarhen86t2h" path="res://assets/fonts/Minecraft-Regular.otf" id="3_jh5hq"]
+
+[resource]
+default_font_size = 32
+RichTextLabel/fonts/bold_font = ExtResource("1_b62nl")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_ts0py")
+RichTextLabel/fonts/italics_font = ExtResource("2_ts0py")
+RichTextLabel/fonts/normal_font = ExtResource("3_jh5hq")

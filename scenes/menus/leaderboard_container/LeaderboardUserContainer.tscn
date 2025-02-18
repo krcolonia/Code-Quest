@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7cm20t13epts"]
+
+[ext_resource type="Texture2D" uid="uid://c2ih08t74tjfr" path="res://assets/ui/textbox/textbox_v1.png" id="1_n4o7n"]
+[ext_resource type="Theme" uid="uid://8ljahhyhocjx" path="res://assets/themes/UI.tres" id="2_1ey5j"]
+[ext_resource type="Script" path="res://scenes/menus/leaderboard_container/leaderboard_user_container.gd" id="2_hs5st"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m1gxk"]
+texture = ExtResource("1_n4o7n")
+texture_margin_left = 45.0
+texture_margin_top = 45.0
+texture_margin_right = 45.0
+texture_margin_bottom = 45.0
+
+[node name="LeaderboardUserContainer" type="Panel"]
+custom_minimum_size = Vector2(125, 125)
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.440002
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m1gxk")
+script = ExtResource("2_hs5st")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Username" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_1ey5j")
+text = "UsernameLabel"
+vertical_alignment = 1
+
+[node name="Points" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_1ey5j")
+text = "0000"
+horizontal_alignment = 2

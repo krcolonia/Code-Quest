@@ -1,0 +1,16 @@
+label RetryPoint
+[style name="TutorialStyle"]
+Your journal is capable of taking any scripts you write with it and execute them with the power of Python.
+The larger box on top is where you write your Python scripts
+When writing your scripts, make sure that you write them under 'def main()'
+That's the Main method, it serves as the entry point of our scripts when using Python.
+The smaller box below will show you the output of your Python script.
+Then the 'Run' button below that, when pressed, runs your scripts and evaluates them based on the problem you're solving.
+Scripts that don't meet the needs of the problem you're trying to solve would only fail.
+If you fail a coding problem, the current NPC assigned to the problem will provide you with feedback and assistance.
+Would you like to repeat the section of the tutorial?
+- Yes
+	jump RetryPoint
+- No, continue to the next section
+	In order to know the instructions and test cases, you may press the 'View Instructions and Cases' button on top.
+	[end_timeline]
