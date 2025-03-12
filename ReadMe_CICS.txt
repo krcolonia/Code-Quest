@@ -65,6 +65,8 @@ Other tham the provided folders above, there are also a couple of loose files fo
 
 * ------------------------------------------------------ ACCESSING THE PROJECT ------------------------------------------------------ *
 
+https://docs.godotengine.org/en/4.3/
+
 If you are planning on accessing this project and viewing/editing the project, Please ensure that you have the following software:
 
 1. Godot 4.3 Stable: The Game Engine used to develop the project. Through Godot, you will be able to access all scenes and scripts
@@ -134,8 +136,8 @@ November 18		->	0.10.4
 * ---------------------------------------------------------- OTHER DETAILS ---------------------------------------------------------- *
 
 If you need support regarding one of the files or scripts provided, you may contact us through the following E-mail Addresses:
-
 Kurt Robin Colonia: kurtrobin.colonia@neu.edu.ph
+
 Dominic Ramos: dominic.ramos@neu.edu.ph
 
 * ---------------------------------------------------------- END OF README ---------------------------------------------------------- *
