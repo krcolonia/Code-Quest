@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://87sbyusxms1y"]
+[gd_scene load_steps=9 format=3 uid="uid://87sbyusxms1y"]
 
 [ext_resource type="Texture2D" uid="uid://ckmka8s08c8la" path="res://assets/background/PauseMenuBG.png" id="1_56bg7"]
+[ext_resource type="Script" path="res://scripts/autoload/AchievementManager.gd" id="1_bcfjg"]
 [ext_resource type="Texture2D" uid="uid://c1vvjliprhv3e" path="res://assets/ui/panels/menu_title_panel1.png" id="2_yhbit"]
 [ext_resource type="FontFile" uid="uid://dn8jthylka01q" path="res://assets/fonts/AtlantisHeadline-Bold.ttf" id="3_ifau7"]
-[ext_resource type="Texture2D" uid="uid://c2ih08t74tjfr" path="res://assets/ui/textbox/textbox_v1.png" id="4_onecp"]
 [ext_resource type="Theme" uid="uid://8ljahhyhocjx" path="res://assets/themes/UI.tres" id="4_un4xv"]
 [ext_resource type="Texture2D" uid="uid://dcd2sl3cxlwyy" path="res://assets/ui/placeholder/cross.png" id="5_8spgt"]
 
@@ -22,14 +22,8 @@ texture_margin_right = 60.0
 texture_margin_bottom = 60.0
 region_rect = Rect2(0, 0, 720, 720)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m1gxk"]
-texture = ExtResource("4_onecp")
-texture_margin_left = 45.0
-texture_margin_top = 45.0
-texture_margin_right = 45.0
-texture_margin_bottom = 45.0
-
 [node name="AchievementMenu" type="CanvasLayer"]
+script = ExtResource("1_bcfjg")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -98,130 +92,15 @@ text = "Achievements"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="UserScrollContainer" type="ScrollContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+[node name="AchievementScrollContainer" type="ScrollContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="UsernameVBox" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer"]
+[node name="AchievementVBox" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/AchievementScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-
-[node name="Achievement1" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox"]
-custom_minimum_size = Vector2(125, 125)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_m1gxk")
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement1"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 70
-theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 70
-theme_override_constants/margin_bottom = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement1/MarginContainer"]
-layout_mode = 2
-
-[node name="Username" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement1/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("4_un4xv")
-text = "I. Baby  Steps!"
-vertical_alignment = 1
-
-[node name="Achievement2" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox"]
-self_modulate = Color(0.454524, 0.454524, 0.454524, 1)
-custom_minimum_size = Vector2(125, 125)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_m1gxk")
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 70
-theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 70
-theme_override_constants/margin_bottom = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement2/MarginContainer"]
-layout_mode = 2
-
-[node name="Username" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement2/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("4_un4xv")
-text = "II. Certified  Scholar  I"
-vertical_alignment = 1
-
-[node name="Achievement3" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox"]
-self_modulate = Color(0.454524, 0.454524, 0.454524, 1)
-custom_minimum_size = Vector2(125, 125)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_m1gxk")
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 70
-theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 70
-theme_override_constants/margin_bottom = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement3/MarginContainer"]
-layout_mode = 2
-
-[node name="Username" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement3/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("4_un4xv")
-text = "III. Paths  Forged  Anew"
-vertical_alignment = 1
-
-[node name="Achievement4" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox"]
-self_modulate = Color(0.454524, 0.454524, 0.454524, 1)
-custom_minimum_size = Vector2(125, 125)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_m1gxk")
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement4"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 70
-theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 70
-theme_override_constants/margin_bottom = 0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement4/MarginContainer"]
-layout_mode = 2
-
-[node name="Username" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/UserScrollContainer/UsernameVBox/Achievement4/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("4_un4xv")
-text = "IV. Certified  Scholar  II"
-vertical_alignment = 1
 
 [node name="CloseButton" type="Button" parent="."]
 offset_left = 78.0

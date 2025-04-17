@@ -1,15 +1,2 @@
-res://scripts/levels/level2/Academe/Seraphius_Room1.gd
-res://scripts/autoload/SaveGameManager.gd
-res://scenes/levels/level1/Lvl1_Interiors.tscn
-res://assets/themes/UI.tres
-res://assets/tilemap/main_tilemap.tres
-res://assets/player/sprite_movement.res
-res://assets/dialogic_styles/CustomDialogueTheme/DialogueTheme.tres
-res://assets/dialogic_styles/TutorialDialog/TutorialDialogueStyle.tres
-res://assets/dialogic/timelines/Thalvin_Intro.dtl
-res://scenes/levels/level1/Lvl1_Exterior.tscn
-res://scenes/levels/level2/Lvl2_Interiors.tscn
-res://scenes/objects/Lectern.tscn
-res://scripts/levels/level2/Academe/AcademeLesson2Blocker.gd
-res://scripts/levels/level2/Academe/AcademeLectern_Scripted.gd
 res://scripts/autoload/AchievementManager.gd
+res://scripts/autoload/SaveGameManager.gd

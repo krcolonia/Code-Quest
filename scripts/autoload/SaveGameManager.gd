@@ -38,6 +38,7 @@ var progress: Dictionary = {
 		},
 	},
 	"guards": {
+
 		"active": false,
 		"tasks": {
 			"unblock_way": {
@@ -222,6 +223,33 @@ var progress: Dictionary = {
 	}
 }
 
+var achievements: Dictionary = {
+	"achieve1" : {
+		"name": "Baby  Steps",
+		"descriotion": "",
+		"points": 25,
+		"status": false
+	},
+	"achieve2" : {
+		"name": "Certified  Scholar  I",
+		"descriotion": "",
+		"points": 25,
+		"status": false
+	},
+	"achieve3" : {
+		"name": "Paths  Forged  Anew",
+		"descriotion": "",
+		"points": 25,
+		"status": false
+	},
+	"achieve4" : {
+		"name": "Certified  Scholar  II",
+		"descriotion": "",
+		"points": 25,
+		"status": false
+	},
+}
+
 var has_save: bool = false
 
 #region # ? Getter and Setter for Active NPCs
@@ -257,6 +285,16 @@ func set_points(point_to_set: int) -> void:
 	add_points.emit()
 #endregion
 
+#region # ? Getter and Setter for Achievements
+func get_achievement(achieveNum: String) -> bool:
+	return achievements[achieveNum]["status"]
+
+func set_achievement(achieveNum: String, status: bool) -> void:
+	achievements[achieveNum]["status"] = status
+	points += achievements[achieveNum]["points"]
+
+#endregion
+
 func get_prologue_done() -> bool:
 	return progress["prologue"]["active"]
 
@@ -280,7 +318,11 @@ func write_save_details() -> void:
 
 	var pts_http = HTTPRequest.new()
 	add_child(pts_http)
-	pts_http.request_completed.connect(self._user_points_http_request)
+	pts_http.request_completed.connect(self._user_points_http_request_completed)
+
+	var achieve_http = HTTPRequest.new()
+	add_child(achieve_http)
+	achieve_http.request_completed.connect(self._achievement_http_request_completed)
 
 	file = FileAccess.open(SAVE_GAME_PATH, FileAccess.WRITE)
 
@@ -296,6 +338,7 @@ func write_save_details() -> void:
 		},
 		"map_name": map_name.map_name, # ? Map that player is currently in
 		"progress_data": progress,
+		"achievements": achievements,
 		"points": points,
 	}
 
@@ -305,15 +348,15 @@ func write_save_details() -> void:
 	Firebase.update_document("leaderboards/%s" % Firebase.user_info.id, { "points": points, "username": Firebase.user_info.username }, pts_http)
 	await pts_http.request_completed
 	Firebase.update_document("progress/%s" % Firebase.user_info.id, data, save_http)
+	await save_http.request_completed
+	Firebase.update_document("achievements/%s" % Firebase.user_info.id, data["achievements"], achieve_http)
 	await finished_saving
 
 	save_http.request_completed.disconnect(self._save_game_http_request_completed)
 	save_http.queue_free()
 
-	pts_http.request_completed.disconnect(self._user_points_http_request)
+	pts_http.request_completed.disconnect(self._user_points_http_request_completed)
 	pts_http.queue_free()
-
-	# print(data)
 
 	has_save = true
 
@@ -345,6 +388,7 @@ func load_save_details() -> void:
 			},
 			"map_name": "LEVEL1_INTERIOR",
 			"progress_data": progress,
+			"achievements": achievements,
 			"points": points,
 		}
 
@@ -367,17 +411,18 @@ func load_save_details() -> void:
 		file.close()
 		data.merge(loaded_data, true)
 	progress.merge(data.progress_data, true)
+	achievements.merge(data.achievements, true)
 	points = loaded_data.points
 
 	# print(data)
 
-func get_loaded_save(body: PackedByteArray):
+func get_loaded_save(body: PackedByteArray) -> void:
 	loaded_data = JSON.parse_string(body.get_string_from_utf8())
 
 
 signal finished_saving
 
-func _save_game_http_request_completed(_result: int, response_code: int, _headers: PackedStringArray, _body: PackedByteArray):
+func _save_game_http_request_completed(_result: int, response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
 	if response_code == 200:
 		print('Save Game Data to DB Successful')
 	else:
@@ -386,7 +431,7 @@ func _save_game_http_request_completed(_result: int, response_code: int, _header
 
 signal finished_loading
 
-func _load_save_http_request(_result: int, response_code: int, _headers: PackedStringArray, body: PackedByteArray):
+func _load_save_http_request(_result: int, response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
 	var json = JSON.parse_string(body.get_string_from_utf8())
 
 	if response_code == 200 && json != null:
@@ -398,7 +443,7 @@ func _load_save_http_request(_result: int, response_code: int, _headers: PackedS
 
 signal updated_db_points
 
-func _user_points_http_request(_result: int, response_code: int, _headers: PackedStringArray, body: PackedByteArray):
+func _user_points_http_request_completed(_result: int, response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
 	var json = JSON.parse_string(body.get_string_from_utf8())
 
 	if response_code == 200 && json != null:
@@ -406,3 +451,14 @@ func _user_points_http_request(_result: int, response_code: int, _headers: Packe
 	else:
 		print('Player Points Saved to DB Unsuccessful')
 	updated_db_points.emit()
+
+signal updated_db_achievements
+
+func _achievement_http_request_completed(_result: int, response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
+	var json = JSON.parse_string(body.get_string_from_utf8())
+
+	if response_code == 200 && json != null:
+		print('Player Points Saved to DB Successful')
+	else:
+		print('Player Points Saved to DB Unsuccessful')
+	updated_db_achievements.emit()

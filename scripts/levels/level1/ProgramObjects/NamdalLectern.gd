@@ -68,6 +68,7 @@ func _on_interact() -> void:
 		SaveGameManager.set_progress("namdal", "id_seal", "done", true)
 		SaveGameManager.set_progress("namdal", "id_seal", "active", false)
 		SaveGameManager.set_npc_active("namdal", false)
+		SaveGameManager.set_achievement("achieve1", true)
 		SaveGameManager.set_npc_active("seraphius", true)
 		SaveGameManager.set_points(points)
 		SaveGameManager.write_save_details()
@@ -94,3 +95,4 @@ func _on_text_signal(argument: String) -> void:
 			lesson_set_output("")
 		"tut_output3":
 			lesson_set_output(demo_scripts["demo3"]["output"])
+ 

@@ -1,5 +1,6 @@
-res://assets/dialogic/timelines
+res://scripts/autoload
 res://scripts/levels/level2/Academe
+res://assets/dialogic/timelines
 res://scripts/levels/level2
 res://assets/fonts
 res://assets/dialogic_styles/CustomDialogueTheme
@@ -17,6 +18,5 @@ res://assets/dialogic/characters
 res://assets/fx
 res://assets/dialogic_styles
 res://scripts/backend
-res://scripts/autoload
 res://assets/dialogic_styles/TutorialDialog
 res://assets/dialogic_styles/TutorialDialog/test_portraitu
