@@ -1,4 +1,4 @@
-[gd_scene load_steps=149 format=4 uid="uid://brka1wpgv0m6c"]
+[gd_scene load_steps=150 format=4 uid="uid://brka1wpgv0m6c"]
 
 [ext_resource type="Script" path="res://scripts/levels/level2/Level2InteriorMain.gd" id="1_dicp8"]
 [ext_resource type="TileSet" uid="uid://cmo24ww45jp5y" path="res://assets/tilemap/main_tilemap.tres" id="2_7dih2"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://scripts/levels/level2/Academe/AcademeLectern_Scripted.gd" id="15_1mr07"]
 [ext_resource type="PackedScene" uid="uid://dqeooewic5hsm" path="res://scenes/objects/Lectern.tscn" id="16_kmdo6"]
 [ext_resource type="Texture2D" uid="uid://cnquy8d5x616i" path="res://assets/object/wall_sign.png" id="17_n41yf"]
+[ext_resource type="Script" path="res://scripts/levels/level2/Academe/Thalvin_Lectern.gd" id="18_pmtp2"]
 [ext_resource type="Script" path="res://scripts/gameplay/interaction/interaction_area.gd" id="18_u2k1o"]
 [ext_resource type="Texture2D" uid="uid://b1ur2fo5io2s0" path="res://assets/player/npcs/AcademeStudent3.png" id="19_apdwl"]
 [ext_resource type="Texture2D" uid="uid://pgjqmqiva0d4" path="res://assets/player/npcs/AcademeStudent1.png" id="20_j20ix"]
@@ -1545,19 +1546,7 @@ action_name = "interact"
 
 [node name="LecternThalvin" parent="Game Objects/ProgramObjects" instance=ExtResource("16_kmdo6")]
 position = Vector2(184, 480)
-instructions = "Every artifact must have a name!. Create a variable called relic_name and assign it with the value 'Amulet of Wisdom'.
-
-Create another variable for the price of the relic! Name the variable 'relic_price' and assign it with an integer value of 3000!
-
-Lastly, create a boolean variable named 'original_relic' and assign it with a value of [b]true[/b]
-
-[b]Do not use the print() function. Only create the variable and assign the given value above[/b]"
-points = 50
-preset_code = "# Add your variables below this comment
-"
-npc_name = "thalvin"
-mission_name = "lesson_variables"
-mission_done = "done"
+script = ExtResource("18_pmtp2")
 
 [node name="LecternLorem" parent="Game Objects/ProgramObjects" instance=ExtResource("14_w2f87")]
 position = Vector2(248, 536)
