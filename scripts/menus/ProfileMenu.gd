@@ -26,8 +26,8 @@ func _ready() -> void:
 
 func _reload_profile() -> void:
 	SceneManager.show_loading()
-	Firebase.get_profile_pic(image_request)
-	await retrieve_pfp_signal
+	# Firebase.get_profile_pic(image_request)
+	# await retrieve_pfp_signal
 	Firebase.get_document("users/%s" % Firebase.user_info.id, username_request)
 	await retrieve_username_signal
 	SceneManager.reset_animplayer()

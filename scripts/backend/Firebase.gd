@@ -14,9 +14,9 @@ extends Node
 const REGISTER_URL := "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBovs0ozz-NQw405dn8QWeAVicAimL5Ubg"
 const LOGIN_URL := "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBovs0ozz-NQw405dn8QWeAVicAimL5Ubg"
 const REFRESH_URL := "https://securetoken.googleapis.com/v1/token?key=AIzaSyBovs0ozz-NQw405dn8QWeAVicAimL5Ubg"
-const DB_URL := "https://codequest-920b1-default-rtdb.firebaseio.com"
+const DB_URL := "https://codequest-920b1-default-rtdb.firebaseio.com/"
 
-const STRG_URL := "https://firebasestorage.googleapis.com/v0/b/code-quest-pytome.appspot.com"
+# const STRG_URL := "https://firebasestorage.googleapis.com/v0/b/code-quest-pytome.appspot.com"
 # ! ^ storage now requires billing, so im not updating this shit. fucking thanks, google.
 
 # ! Variable for storing user information (Token, Refresh Token, User ID, Username)
@@ -181,14 +181,14 @@ func _on_get_leaderboards_completed(_result: int, response_code: int, _headers: 
 	print("Get Leaderboards Response: " + str(response_code))
 
 # ? Function used to retrieve images from Firbase Storage
-func get_profile_pic(http: HTTPRequest) -> void:
-	if !http.is_connected("request_completed", _on_storage_request_completed):
-		http.request_completed.connect(_on_storage_request_completed)
-	var url: String = STRG_URL + "/o/user-profile%2F" + user_info.id + ".png?alt=media"
-	http.request(url, _get_request_headers(), HTTPClient.METHOD_GET)
+# func get_profile_pic(http: HTTPRequest) -> void:
+# 	if !http.is_connected("request_completed", _on_storage_request_completed):
+# 		http.request_completed.connect(_on_storage_request_completed)
+# 	var url: String = STRG_URL + "/o/user-profile%2F" + user_info.id + ".png?alt=media"
+# 	http.request(url, _get_request_headers(), HTTPClient.METHOD_GET)
 
-func _on_storage_request_completed(_result: int, response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
-	print("Storage Request Response: " + str(response_code))
+# func _on_storage_request_completed(_result: int, response_code: int, _headers: PackedStringArray, _body: PackedByteArray) -> void:
+# 	print("Storage Request Response: " + str(response_code))
 #endregion
 
 #region # ! Functions used to test connection with Firebase

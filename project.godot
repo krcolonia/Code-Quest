@@ -36,6 +36,7 @@ PlayerGlobalVars="*res://scripts/player/PlayerGlobalVars.gd"
 SaveGameManager="*res://scenes/autoload/SaveGameManager.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
+Supabase="*res://addons/supabase/Supabase/supabase.gd"
 
 [dialogic]
 
@@ -167,7 +168,7 @@ window/vsync/vsync_mode=0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/monitor_overlay/plugin.cfg")
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/monitor_overlay/plugin.cfg", "res://addons/supabase/plugin.cfg")
 
 [file_customization]
 
