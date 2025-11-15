@@ -1,9 +1,9 @@
 extends Node
 
-# ! fair comment, this warning was added way after the end of my capstone project. i'm revisiting this
-# ! project simply because i want to completely revamp a couple of things. that being said, all code i've
-# ! written for this was all done during a coffee-feuled sleep deprived rage fest and I suggest you
-# ! view it with this context in mind.
+# ! this autoload class is kept for archival purposes, in case anyone wants to implement firebase onto their project
+# ! just keep in mind that the storage service for firebase now requires you to have a billing plan, which is total
+# ! dogshit. avoid firebase at all costs if you want to build an actual project. it's only good if you're learning REST APIs
+# ! and need a quick way to have an online database with auth up and running, but avoid it like the plague -krColonia
 
 # ? This class is autoloaded, meaning that it runs in the background of whichever scene
 # ? we are in the game. This is made so that we could access all these functions anytime.
@@ -18,11 +18,6 @@ const DB_URL := "https://codequest-920b1-default-rtdb.firebaseio.com"
 
 const STRG_URL := "https://firebasestorage.googleapis.com/v0/b/code-quest-pytome.appspot.com"
 # ! ^ storage now requires billing, so im not updating this shit. fucking thanks, google.
-
-# ? because google is a greedy company, i've decided to switch over to Supabase because
-# ? open source is supreme. locking your services that were previously free behind a paywall 
-# ? is a bitch ass move and is enough to tell me you were dropped on your head as a baby.
-# ? suck a dick, google
 
 # ! Variable for storing user information (Token, Refresh Token, User ID, Username)
 var user_info: Dictionary
