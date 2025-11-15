@@ -1,0 +1,24 @@
+[style name="TutorialStyle"]
+label RetryPoint
+In order to cast the [b]print()[/b], all you have to do is write it below the [b]main()[/b] function.
+For example, if you type in [b]print('Hello, World!')[/b]
+When we run the script, we will get an output of 'Hello, World!'
+Whatever is written within the parenthesis of the [b]print()[/b] function will be printed back by Python.
+Each call of the [b]print()[/b] makes use of one line!
+For the next example, we will make use of 2 [b]print()[/b] functions
+When we run [b]print('Hello,')[/b] followed in the next line by [b]print('World!')[/b]
+We will get an output of 'Hello,' followed in the next line by 'World!'.
+Now, when printing separate lines, we don't necessarily have to use multiple [b]print()[/b] statements!
+We can achieve the same output as before, printing 2 different lines, by using only 1 [b]print()[/b] function!
+We can make use of the [b]\n[/b] special character to indicate a new line within the same print() call!
+So we run print('Hello,\nWorld!), we will get 'Hello,' followed in the next line by 'World!'
+Using the 'print()' function isn't limited to just words!
+We can output numbers using the 'print()' function too!'
+We can use either the '+' symbol, or a comma!
+First, I'll use [b]print('Elders: ' + 3)[/b]
+Next, I'll use [b]print('Students:', 6)[/b]
+We will get an output of[br][br]'Elders: 3'[br]and[br]'Students: 6'!
+- Continue Coding!
+	[end_timeline]
+- Repeat Lesson
+	jump RetryPoint

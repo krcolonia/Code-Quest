@@ -1,0 +1,10 @@
+Mother: Good morning {user_var.username}!
+join Mother (Default) 0
+Mother: Don't forget to bring the things I prepared for you, and your [b]journal[/b].
+Mother: It's a big world out there, and I don't want you missing out on your needs!
+Mother: Oh, and before you head to the [b]Academe[/b], go visit Namdal. He's just at his tavern next door.
+Mother: If you're confused where things are, just look for the sign out at the path!
+Mother: Be sure to keep safe, alright?
+[i]You now have access to your Journal![pause=0.5] You can view your [b]active tasks[/b] inside the journal, which NPC the task is for, and where you can find them![/i]
+[i]You can also view completed [b]Lessons[/b] via the Journal![/i]
+leave Mother

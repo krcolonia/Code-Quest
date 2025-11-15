@@ -1,0 +1,16 @@
+label AskDir
+[i]Where would you like to go?[/i]
+- Namdal's Tavern
+	[i]To get to Namdal's Tavern, walk east of the Village. You will be able to find a building with a green roof, which is Namdal's Tavern.[/i]
+	jump AskDir
+- The Academe
+	[i]To get to the Academe, walk north of the Village. You may get blocked by Guards of the Order without the proper identification![/i]
+	jump AskDir
+- Blacksmith's Forge
+	[i]To get to the Blacksmith's Forge, walk south of the Village, then walk west. You will be able to find a building with blue roofing, and a blacksmith's kiln.[/i]
+	jump AskDir
+- The Village Library
+	[i]To get to the Village Library, walk south of the Village, then walk east. You will be able to find the library, with it's 4 corner towers and purple roofing.[/i]
+	jump AskDir
+- Nevermind...
+	[end_timeline]

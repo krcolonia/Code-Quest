@@ -1,0 +1,48 @@
+Namdal: Oh, hey kid!
+join Namdal 1
+Namdal: What brings you around here?
+- Replay Coding UI Tutorial
+	leave Namdal
+	if {user_var.gender} == "Female":
+		join MC_Female 3
+	else:
+		join MC_Male 3
+	MainCharacter_Name: Can you teach me about how I can make my scripts in the Journal again?
+	if {user_var.gender} == "Female":
+		leave MC_Female
+	else:
+		leave MC_Male
+	join Namdal 1
+	Namdal: Sure kid! I'll go ahead and explain it again for ya.[signal=replay_tut]
+	leave Namdal
+	[end_timeline]
+- Replay Coding UI Demonstration
+	leave Namdal
+	if {user_var.gender} == "Female":
+		join MC_Female 3
+	else:
+		join MC_Male 3
+	MainCharacter_Name: Could you maybe demonstrate how making and running my scripts in my Journal works?
+	if {user_var.gender} == "Female":
+		leave MC_Female
+	else:
+		leave MC_Male
+	join Namdal 1
+	Namdal: Sure kid! I'll go ahead and use the identification seal as an example again.
+	leave Namdal
+	[end_timeline]
+- Leave
+	leave Namdal
+	if {user_var.gender} == "Female":
+		join MC_Female 3
+	else:
+		join MC_Male 3
+	MainCharacter_Name: Oh, well I just stopped by to say hello!
+	if {user_var.gender} == "Female":
+		leave MC_Female
+	else:
+		leave MC_Male
+	join Namdal 1
+	Namdal: Heh, well I'm doin' fine kid! I'm guessing you got some more stuff to do so I'll leave ya to it!
+	[end_timeline]
+leave Namdal

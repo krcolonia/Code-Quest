@@ -1,0 +1,35 @@
+[i]You approach your mother after coming back to the house[/i]
+join Mother 0
+Mother: Oh hey {user_var.username}, What's the matter?
+Mother: Did you forget anything?
+- I just wanted to know how you're doing.
+	leave Mother
+	if {user_var.gender} == "Female":
+		join MC_Female 1
+	else:
+		join MC_Male 1
+	MainCharacter_Name: I just came back to ask how you're doing these days?
+	if {user_var.gender} == "Female":
+		leave MC_Female
+	else:
+		leave MC_Male
+	join Mother 0
+	Mother: Oh you really are a thoughtful child! Why, I'm doing fine {user_var.username}! How about you?
+	Mother: That reminds me! You have to get to the [b]Academe[/b]! Wouldn't want to be late now, would you?
+	leave Mother
+	[end_timeline]
+- Nothing...
+	leave Mother
+	if {user_var.gender} == "Female":
+		join MC_Female 1
+	else:
+		join MC_Male 1
+	MainCharacter_Name: Hmm, I thought I forgot something but maybe I was wrong...
+	if {user_var.gender} == "Female":
+		leave MC_Female
+	else:
+		leave MC_Male
+	join Mother 0
+	Mother: Well, whatever it is, it better not be the [b]Identity Seal[/b] from [b]Namdal[/b]! You need that before getting in the [b]Academe[/b]!
+	leave Mother
+	[end_timeline]

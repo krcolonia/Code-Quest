@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://blgkhfmkmp0sc"
+path="res://.godot/imported/InputMenuBG.aseprite-e0618a4b3971482609079e33055f0db4.res"
+
+[deps]
+
+source_file="res://assets/background/InputMenuBG.aseprite"
+dest_files=["res://.godot/imported/InputMenuBG.aseprite-e0618a4b3971482609079e33055f0db4.res"]
+
+[params]
+

@@ -1,0 +1,236 @@
+[gd_scene load_steps=11 format=3 uid="uid://bmhrdj1d7n0nq"]
+
+[ext_resource type="Script" path="res://scripts/backend/Login.gd" id="1_sd067"]
+[ext_resource type="Theme" uid="uid://8ljahhyhocjx" path="res://assets/themes/UI.tres" id="2_vh8gy"]
+[ext_resource type="Texture2D" uid="uid://c1vvjliprhv3e" path="res://assets/ui/panels/menu_title_panel1.png" id="3_pq1l3"]
+[ext_resource type="FontFile" uid="uid://dn8jthylka01q" path="res://assets/fonts/AtlantisHeadline-Bold.ttf" id="4_3p851"]
+[ext_resource type="Theme" uid="uid://btkajnikr21jf" path="res://assets/themes/RedirectTheme.tres" id="5_eqp5l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8u233"]
+texture = ExtResource("3_pq1l3")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+region_rect = Rect2(0, 0, 720, 720)
+
+[sub_resource type="Animation" id="Animation_pn3gj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InputCanvas/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fk65p"]
+resource_name = "fade_in"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InputCanvas/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_27u6h"]
+resource_name = "fade_out"
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InputCanvas/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lw7mb"]
+_data = {
+"RESET": SubResource("Animation_pn3gj"),
+"fade_in": SubResource("Animation_fk65p"),
+"fade_out": SubResource("Animation_27u6h")
+}
+
+[node name="LoginScreen" type="CanvasLayer"]
+script = ExtResource("1_sd067")
+metadata/_edit_vertical_guides_ = [360.0]
+metadata/_edit_horizontal_guides_ = [169.0]
+
+[node name="BGCanvas" type="CanvasLayer" parent="."]
+
+[node name="BGPanel" type="Panel" parent="BGCanvas"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vh8gy")
+
+[node name="InputCanvas" type="CanvasLayer" parent="."]
+
+[node name="PageInputMargin" type="MarginContainer" parent="InputCanvas"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 777.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 75
+
+[node name="InputVBox" type="VBoxContainer" parent="InputCanvas/PageInputMargin"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="TitleMargin" type="MarginContainer" parent="InputCanvas/PageInputMargin/InputVBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="PageTitlePanel" type="Panel" parent="InputCanvas/PageInputMargin/InputVBox/TitleMargin"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8u233")
+
+[node name="CenterContainer" type="CenterContainer" parent="InputCanvas/PageInputMargin/InputVBox/TitleMargin/PageTitlePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="InputCanvas/PageInputMargin/InputVBox/TitleMargin/PageTitlePanel/CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.819608, 0.666667, 0.223529, 1)
+theme_override_colors/font_shadow_color = Color(0.521569, 0.309804, 0.0705882, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("4_3p851")
+theme_override_font_sizes/font_size = 36
+text = "Sign In"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Username" type="VBoxContainer" parent="InputCanvas/PageInputMargin/InputVBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="InputCanvas/PageInputMargin/InputVBox/Username"]
+layout_mode = 2
+theme = ExtResource("2_vh8gy")
+text = "Username"
+
+[node name="LineEdit" type="LineEdit" parent="InputCanvas/PageInputMargin/InputVBox/Username"]
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_vh8gy")
+placeholder_text = "Username"
+
+[node name="Email" type="VBoxContainer" parent="InputCanvas/PageInputMargin/InputVBox"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="InputCanvas/PageInputMargin/InputVBox/Email"]
+layout_mode = 2
+theme = ExtResource("2_vh8gy")
+text = "Email  Address"
+
+[node name="LineEdit" type="LineEdit" parent="InputCanvas/PageInputMargin/InputVBox/Email"]
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_vh8gy")
+placeholder_text = "Email Address"
+
+[node name="Password" type="VBoxContainer" parent="InputCanvas/PageInputMargin/InputVBox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="InputCanvas/PageInputMargin/InputVBox/Password"]
+layout_mode = 2
+theme = ExtResource("2_vh8gy")
+text = "Password"
+
+[node name="LineEdit" type="LineEdit" parent="InputCanvas/PageInputMargin/InputVBox/Password"]
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("2_vh8gy")
+placeholder_text = "Password"
+secret = true
+
+[node name="SubmitMargin" type="MarginContainer" parent="InputCanvas/PageInputMargin/InputVBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 110
+theme_override_constants/margin_right = 110
+
+[node name="LoginButton" type="Button" parent="InputCanvas/PageInputMargin/InputVBox/SubmitMargin"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme = ExtResource("2_vh8gy")
+text = "Sign In"
+
+[node name="RedirectRegister" type="MarginContainer" parent="InputCanvas/PageInputMargin/InputVBox"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="InputCanvas/PageInputMargin/InputVBox/RedirectRegister"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InputCanvas/PageInputMargin/InputVBox/RedirectRegister/CenterContainer"]
+clip_contents = false
+layout_mode = 2
+theme = ExtResource("5_eqp5l")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = 2
+bbcode_enabled = true
+text = "[center][b]Dont have an account yet?
+Tap here to [color=blue][u]Create an Account[/u][/color][/b]![/center]"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Button" type="Button" parent="InputCanvas/PageInputMargin/InputVBox/RedirectRegister"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_vh8gy")
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+flat = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="InputCanvas"]
+visible = false
+color = Color(1, 1, 1, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lw7mb")
+}
+
+[connection signal="pressed" from="InputCanvas/PageInputMargin/InputVBox/SubmitMargin/LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="button_up" from="InputCanvas/PageInputMargin/InputVBox/RedirectRegister/Button" to="." method="_on_redirect_register_btn_button_up"]

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dv7yin6lhmu03"
+path="res://.godot/imported/interior-roof-tilemap.aseprite-a19f285a7d03a90ad9a4b3cff511a9ec.res"
+
+[deps]
+
+source_file="res://assets/tilemap/interior-roof-tilemap.aseprite"
+dest_files=["res://.godot/imported/interior-roof-tilemap.aseprite-a19f285a7d03a90ad9a4b3cff511a9ec.res"]
+
+[params]
+

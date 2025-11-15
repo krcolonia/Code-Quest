@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://d16x5ybqp6vld"]
+
+[ext_resource type="Texture2D" uid="uid://c5f4h0tqn1q1s" path="res://assets/tilemap/Map_Guidelines.png" id="1_sh61m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_elkfx"]
+texture = ExtResource("1_sh61m")
+1:1/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:2/0 = 0
+5:3/0 = 0
+4:4/0 = 0
+0:1/0 = 0
+0:0/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+6:2/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+1:4/0 = 0
+5:1/0 = 0
+6:0/0 = 0
+7:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kaj17"]
+sources/0 = SubResource("TileSetAtlasSource_elkfx")
+
+[node name="GuidelineTiles" type="TileMapLayer"]
+tile_set = SubResource("TileSet_kaj17")

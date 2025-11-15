@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgjx3b5x06p74"]
+
+[ext_resource type="Script" path="res://scripts/gameplay/interaction/double_door_interaction.gd" id="1_dxvhw"]
+[ext_resource type="Texture2D" uid="uid://blmp1y3a7n3lm" path="res://assets/object/doors/door_double.png" id="1_m52te"]
+[ext_resource type="PackedScene" uid="uid://dmmv4ljcluhnb" path="res://scenes/interaction/interaction_area/interaction_area.tscn" id="2_3imwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2qm7"]
+size = Vector2(12, 6)
+
+[node name="DoubleDoor" type="Node2D"]
+script = ExtResource("1_dxvhw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m52te")
+
+[node name="InteractionArea" parent="Sprite2D" instance=ExtResource("2_3imwg")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/InteractionArea"]
+position = Vector2(0, 19)
+shape = SubResource("RectangleShape2D_k2qm7")
+debug_color = Color(1, 0, 0.0901961, 0.419608)

@@ -1,0 +1,235 @@
+[gd_scene load_steps=16 format=3 uid="uid://c81wvp3l3ayh"]
+
+[ext_resource type="Script" path="res://scripts/menus/ProfileMenu.gd" id="1_hg6l1"]
+[ext_resource type="Texture2D" uid="uid://ckmka8s08c8la" path="res://assets/background/PauseMenuBG.png" id="2_5guwu"]
+[ext_resource type="Texture2D" uid="uid://c1vvjliprhv3e" path="res://assets/ui/panels/menu_title_panel1.png" id="3_wytav"]
+[ext_resource type="FontFile" uid="uid://dn8jthylka01q" path="res://assets/fonts/AtlantisHeadline-Bold.ttf" id="4_h0lfn"]
+[ext_resource type="Texture2D" uid="uid://yr20o45k5g46" path="res://assets/ui/pfp-mask.png" id="5_anyj7"]
+[ext_resource type="Texture2D" uid="uid://c6p104tr8qc7g" path="res://assets/portraits/BaseNPC_Portrait.png" id="6_5b1np"]
+[ext_resource type="Theme" uid="uid://8ljahhyhocjx" path="res://assets/themes/UI.tres" id="7_ghec7"]
+[ext_resource type="Texture2D" uid="uid://dcd2sl3cxlwyy" path="res://assets/ui/placeholder/cross.png" id="8_hp0ka"]
+[ext_resource type="FontFile" uid="uid://dxdarhen86t2h" path="res://assets/fonts/Minecraft-Regular.otf" id="8_xrhn6"]
+[ext_resource type="FontFile" uid="uid://d2k3ly52ewntf" path="res://assets/fonts/Minecraft-Italic.otf" id="9_g5ne7"]
+[ext_resource type="FontFile" uid="uid://c0yc3yf8r8cyt" path="res://assets/fonts/Minecraft-BoldItalic.otf" id="10_yhele"]
+[ext_resource type="FontFile" uid="uid://qd7ycd7kkcx5" path="res://assets/fonts/Minecraft-Bold.otf" id="11_yuuad"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bomek"]
+texture = ExtResource("2_5guwu")
+texture_margin_left = 52.3604
+texture_margin_top = 52.0
+texture_margin_right = 52.0
+texture_margin_bottom = 52.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mfy2t"]
+texture = ExtResource("3_wytav")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+region_rect = Rect2(0, 0, 720, 720)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ub2lf"]
+bg_color = Color(0, 0, 0, 0.54902)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 0.705882)
+border_blend = true
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 4
+anti_aliasing = false
+
+[node name="ProfileMenu" type="CanvasLayer"]
+script = ExtResource("1_hg6l1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bomek")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 56
+theme_override_constants/margin_top = 56
+theme_override_constants/margin_right = 56
+theme_override_constants/margin_bottom = 56
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="TitleMargin" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 115
+theme_override_constants/margin_right = 35
+
+[node name="PageTitlePanel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/TitleMargin"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mfy2t")
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/TitleMargin/PageTitlePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/TitleMargin/PageTitlePanel/CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.819608, 0.666667, 0.223529, 1)
+theme_override_colors/font_shadow_color = Color(0.521569, 0.309804, 0.0705882, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("4_h0lfn")
+theme_override_font_sizes/font_size = 36
+text = "User Profile"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProfileContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PfpMask" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/ProfileContainer"]
+clip_children = 1
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+texture = ExtResource("5_anyj7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ProfilePhoto" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/ProfileContainer/PfpMask"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_5b1np")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="UsernameLabel" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/ProfileContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource("7_ghec7")
+text = "UsernameLabel"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+
+[node name="Panel" type="Panel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ub2lf")
+
+[node name="BioMargin" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Panel/BioMargin"]
+layout_mode = 2
+
+[node name="BioTitle" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Panel/BioMargin/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource("7_ghec7")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 18
+text = "Account Bio:"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Panel/BioMargin/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerBio" type="RichTextLabel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Panel/BioMargin/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("8_xrhn6")
+theme_override_fonts/italics_font = ExtResource("9_g5ne7")
+theme_override_fonts/bold_italics_font = ExtResource("10_yhele")
+theme_override_fonts/bold_font = ExtResource("11_yuuad")
+theme_override_font_sizes/bold_italics_font_size = 25
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/mono_font_size = 25
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[fill]	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.[/fill]"
+
+[node name="EditProfileBtn" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_ghec7")
+theme_override_font_sizes/font_size = 46
+text = "Edit Profile"
+
+[node name="LogoutBtn" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_ghec7")
+theme_override_font_sizes/font_size = 46
+text = "Log Out of Account"
+
+[node name="CloseButton" type="Button" parent="MarginContainer/Panel"]
+layout_mode = 1
+offset_left = 65.0
+offset_top = 65.0
+offset_right = 215.0
+offset_bottom = 215.0
+scale = Vector2(0.6, 0.6)
+theme = ExtResource("7_ghec7")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0.666667)
+icon = ExtResource("8_hp0ka")
+
+[node name="PfpImageRequest" type="HTTPRequest" parent="."]
+
+[node name="UsernameRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/EditProfileBtn" to="." method="_on_visit_site_button_pressed"]
+[connection signal="button_up" from="MarginContainer/Panel/CloseButton" to="." method="_on_close_button_up"]

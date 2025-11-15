@@ -1,0 +1,274 @@
+[gd_scene load_steps=24 format=3 uid="uid://dty4wm0fleopa"]
+
+[ext_resource type="Script" path="res://scripts/ui/IngameUI.gd" id="1_lxkmb"]
+[ext_resource type="Texture2D" uid="uid://csra7seuw3oe6" path="res://assets/ui/buttons/move_button.png" id="2_23o5f"]
+[ext_resource type="Texture2D" uid="uid://hrerkrm84ia0" path="res://assets/ui/buttons/interact_button_disabled.png" id="7_b3xd0"]
+[ext_resource type="Texture2D" uid="uid://coyxnqyxpue1w" path="res://assets/ui/buttons/interact_button_tapped.png" id="7_d7q6w"]
+[ext_resource type="Script" path="res://addons/monitor_overlay/monitor_overlay.gd" id="7_jyevs"]
+[ext_resource type="Texture2D" uid="uid://c3jqbn3hhhwlp" path="res://assets/ui/buttons/journal_button.png" id="8_7i4da"]
+[ext_resource type="Texture2D" uid="uid://vglgmfybx5hh" path="res://assets/ui/buttons/run_button.png" id="8_kje5l"]
+[ext_resource type="Texture2D" uid="uid://ch2yditlk4ick" path="res://assets/ui/buttons/interact_button.png" id="8_vchiw"]
+[ext_resource type="PackedScene" uid="uid://6k5kkojd6a0n" path="res://scenes/ui/CodingUI.tscn" id="8_vv5dr"]
+[ext_resource type="Texture2D" uid="uid://c2ih08t74tjfr" path="res://assets/ui/textbox/textbox_v1.png" id="10_8evfr"]
+[ext_resource type="Texture2D" uid="uid://drcky6ahgj22e" path="res://assets/ui/buttons/pause_button.png" id="10_ng3tv"]
+[ext_resource type="Theme" uid="uid://8ljahhyhocjx" path="res://assets/themes/UI.tres" id="10_tbus2"]
+[ext_resource type="Script" path="res://scripts/ui/HUD_Task.gd" id="11_8kty5"]
+[ext_resource type="PackedScene" uid="uid://1rvo4q2w1kdr" path="res://scenes/ui/PauseUI.tscn" id="11_43kvf"]
+[ext_resource type="PackedScene" uid="uid://bgfjjh87nl0y1" path="res://scenes/ui/JournalUI.tscn" id="17_jcfo2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1k2ej"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g7u3r"]
+texture = ExtResource("7_b3xd0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a4i6x"]
+texture = ExtResource("8_vchiw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ic8rr"]
+texture = ExtResource("7_d7q6w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xmfao"]
+texture = ExtResource("8_vchiw")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m862n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_31x1f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lkfgw"]
+texture = ExtResource("10_8evfr")
+texture_margin_left = 45.0
+texture_margin_top = 45.0
+texture_margin_right = 45.0
+texture_margin_bottom = 45.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="IngameUI" type="CanvasLayer" groups=["ui"]]
+script = ExtResource("1_lxkmb")
+
+[node name="Controls" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dpad" type="Control" parent="Controls"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 43.0
+offset_top = -346.0
+offset_right = 243.0
+offset_bottom = -146.0
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+
+[node name="up" type="Control" parent="Controls/Dpad"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.0
+offset_right = 32.0
+offset_bottom = 64.0
+grow_horizontal = 2
+
+[node name="upBtn" type="TouchScreenButton" parent="Controls/Dpad/up"]
+texture_normal = ExtResource("2_23o5f")
+passby_press = true
+
+[node name="down" type="Control" parent="Controls/Dpad"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_right = 96.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 3.14159
+
+[node name="downBtn" type="TouchScreenButton" parent="Controls/Dpad/down"]
+texture_normal = ExtResource("2_23o5f")
+passby_press = true
+
+[node name="left" type="Control" parent="Controls/Dpad"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 32.0
+offset_right = 64.0
+offset_bottom = 96.0
+grow_vertical = 2
+rotation = -1.5708
+
+[node name="leftBtn" type="TouchScreenButton" parent="Controls/Dpad/left"]
+texture_normal = ExtResource("2_23o5f")
+passby_press = true
+
+[node name="right" type="Control" parent="Controls/Dpad"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -32.0
+offset_right = 64.0
+offset_bottom = 32.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+
+[node name="rightBtn" type="TouchScreenButton" parent="Controls/Dpad/right"]
+texture_normal = ExtResource("2_23o5f")
+passby_press = true
+
+[node name="MonitorOverlay" type="VBoxContainer" parent="Controls"]
+visible = false
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_right = 1.0
+offset_left = 0.359985
+offset_bottom = 320.0
+grow_horizontal = 0
+script = ExtResource("7_jyevs")
+process = true
+static_memory = true
+video_memory = true
+graph_antialiased = true
+
+[node name="InteractButton" type="Button" parent="Controls"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -304.0
+offset_top = -322.0
+offset_right = -176.0
+offset_bottom = -194.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1k2ej")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_g7u3r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_a4i6x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ic8rr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_xmfao")
+action_mode = 0
+
+[node name="runButton" type="Control" parent="Controls"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -176.0
+offset_top = -194.0
+offset_right = -48.0
+offset_bottom = -66.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Controls/runButton"]
+scale = Vector2(2, 2)
+texture_normal = ExtResource("8_kje5l")
+passby_press = true
+
+[node name="pauseBtn" type="Button" parent="Controls"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 87.0
+offset_bottom = 87.0
+scale = Vector2(1.25, 1.25)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m862n")
+icon = ExtResource("10_ng3tv")
+flat = true
+
+[node name="journalBtn" type="Button" parent="Controls"]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 120.0
+offset_right = 87.0
+offset_bottom = 192.0
+scale = Vector2(1.25, 1.25)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_31x1f")
+icon = ExtResource("8_7i4da")
+flat = true
+
+[node name="TaskPanel" type="Panel" parent="Controls"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -376.0
+offset_top = 16.0
+offset_right = 424.0
+offset_bottom = 300.0
+grow_horizontal = 0
+scale = Vector2(0.45, 0.45)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_lkfgw")
+
+[node name="MarginContainer" type="MarginContainer" parent="Controls/TaskPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 45
+theme_override_constants/margin_bottom = 45
+
+[node name="TaskLabel" type="Label" parent="Controls/TaskPanel/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("10_tbus2")
+theme_override_font_sizes/font_size = 48
+text = "Task
+Talk to Mother"
+horizontal_alignment = 1
+script = ExtResource("11_8kty5")
+
+[node name="CodingUI" parent="." instance=ExtResource("8_vv5dr")]
+unique_name_in_owner = true
+visible = false
+
+[node name="RichTextLabel" parent="CodingUI/VBoxContainer/InstructionPanel/MarginContainer/VBoxContainer/TestCasePanel/MarginContainer" index="0"]
+text = "[b]Test Cases[/b]
+
+[b]Expected Output[/b]:"
+
+[node name="PauseUI" parent="." instance=ExtResource("11_43kvf")]
+visible = false
+
+[node name="JournalUI" parent="." instance=ExtResource("17_jcfo2")]
+visible = false
+
+[node name="Label" parent="JournalUI/BackgroundPanel/MarginContainer/Map/TitleMargin/PageTitlePanel/CenterContainer" index="0"]
+text = "Map"
+
+[connection signal="pressed" from="Controls/InteractButton" to="." method="_on_interact_button_pressed"]
+[connection signal="pressed" from="Controls/pauseBtn" to="." method="_on_pause_btn_pressed"]
+[connection signal="pressed" from="Controls/journalBtn" to="." method="_on_journal_btn_pressed"]
+[connection signal="pressed" from="CodingUI/CodingPanel/CloseButton" to="." method="_on_close_coding_button_pressed"]
+[connection signal="pressed" from="PauseUI/MarginContainer/VBoxContainer/OptionsPanel/MarginContainer/VBoxContainer/ResumeBtn" to="." method="_on_resume_btn_pressed"]
+
+[editable path="CodingUI"]
+[editable path="PauseUI"]
+[editable path="PauseUI/SettingsMenu"]
+[editable path="JournalUI"]

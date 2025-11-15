@@ -1,0 +1,4 @@
+[i]You approach Elder Seraphius to the front of the class.[/i]
+join ElderSeraphius 0
+ElderSeraphius: Hmm...? My lesson for today is done, child. You may head on over to Elder Thalvin for your next lesson!
+leave ElderSeraphius

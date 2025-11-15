@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2qpox2kawyx2"]
+
+[ext_resource type="Script" path="res://scripts/gameplay/objects/Lectern.gd" id="1_ajtef"]
+[ext_resource type="Texture2D" uid="uid://mr4y0qq4q7on" path="res://assets/object/lectern_left.png" id="2_20d1k"]
+[ext_resource type="PackedScene" uid="uid://dmmv4ljcluhnb" path="res://scenes/interaction/interaction_area/interaction_area.tscn" id="3_wa10g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5iw0t"]
+size = Vector2(6, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5tba"]
+size = Vector2(16, 16)
+
+[node name="Lectern" type="Node2D"]
+script = ExtResource("1_ajtef")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_20d1k")
+
+[node name="InteractionArea" parent="Sprite2D" instance=ExtResource("3_wa10g")]
+action_name = "code"
+interact_type = "code"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/InteractionArea"]
+position = Vector2(-11, 0)
+shape = SubResource("RectangleShape2D_5iw0t")
+debug_color = Color(1, 0, 0.088366, 0.42)
+
+[node name="CollisionBody" type="StaticBody2D" parent="Sprite2D"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CollisionBody"]
+shape = SubResource("RectangleShape2D_r5tba")

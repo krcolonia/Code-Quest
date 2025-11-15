@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqpb3ie51rwl5"]
+
+[ext_resource type="Script" path="res://assets/dialogic_styles/CustomDialogueTheme/default_layout_base.gd" id="1_ifsho"]
+
+[node name="Custom" type="CanvasLayer"]
+layer = 15
+script = ExtResource("1_ifsho")
+canvas_layer = 15
+global_font_color = Color(0, 0, 0, 1)
+global_font = "res://assets/fonts/Minecraft-Regular.otf"
+global_font_size = 32

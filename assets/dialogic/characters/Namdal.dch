@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0, 0, 0, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "default",
+"description": "The keeper of the local tavern. He used to be a scribe within the Order and has basic knowledge over Python. He serves as your first teacher and helps in familiarizing you with the power of Python.",
+"display_name": "Namdal",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"default": {
+"export_overrides": {
+"image": "\"res://assets/portraits/Namdal.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

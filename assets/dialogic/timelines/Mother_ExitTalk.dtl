@@ -1,0 +1,10 @@
+Mother: I know you're excited, but were you planning on leaving before saying goodbye? Silly child!
+join Mother 0
+Mother: You almost forgot to bring the things I prepared for you, and your [b]journal[/b]!
+Mother: Before you head to the [b]Academe[/b], go to [b]Namdal's Tavern[/b]. There's something you'd have to get from him before you can enter the [b]Academe[/b].
+Mother: If you're confused where to go, you can check the map inside your journal!
+Mother: You can also check for signposts scattered around the village where you can look for directions!
+Mother: Keep safe, okay?
+[i]You now have access to your Journal![pause=0.5] You can view your [b]active tasks[/b] inside the journal, which NPC the task is for, and where you can find them![/i]
+[i]You can also view completed [b]Lessons[/b] via the Journal![/i]
+leave Mother

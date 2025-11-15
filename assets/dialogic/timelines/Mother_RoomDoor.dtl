@@ -1,0 +1,11 @@
+[i]You try to open the master's bedroom, but it's locked...[/i]
+if {user_var.gender} == "Female":
+	join MC_Female 0
+else:
+	join MC_Male 0
+MainCharacter_Name: [i]This is the master bedroom. It's where my parents sleep. Although, only Mother has been using it since Father's disappearance...[/i]
+MainCharacter_Name: Probably best not to snoop around, I got a big day ahead of me!
+if {user_var.gender} == "Female":
+	leave MC_Female
+else:
+	leave MC_Male

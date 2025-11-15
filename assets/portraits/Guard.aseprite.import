@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://8nfgbf1p7hv1"
+path="res://.godot/imported/Guard.aseprite-31649564cc2a9ffe99fcdb09a5415645.res"
+
+[deps]
+
+source_file="res://assets/portraits/Guard.aseprite"
+dest_files=["res://.godot/imported/Guard.aseprite-31649564cc2a9ffe99fcdb09a5415645.res"]
+
+[params]
+

@@ -1,0 +1,14 @@
+Hey there {user_var.username}!
+if {user_var.gender} == "Female":
+	join MC_Female 1
+else:
+	join MC_Male 1
+Thanks for playing the demo of our Game-Based Learning App, [b]Code Quest - The PyTome of Knowledge![/b] [pause=0.5]When we distributed this game, we also included a survey link....
+We hope that after playing our game's demo, you'd be able to answer the survey!
+Your input will be invaluable and will certainly help our study!
+Hope you have a great day, and once again [b]Thanks for Playing![/b]
+if {user_var.gender} == "Female":
+	leave MC_Female 
+else:
+	leave MC_Male
+[i]Sincerely,[br][br]Kurt Robin Colonia[br]Dominic Ramos[/i]

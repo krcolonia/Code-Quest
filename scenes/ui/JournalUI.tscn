@@ -1,0 +1,843 @@
+[gd_scene load_steps=25 format=3 uid="uid://bgfjjh87nl0y1"]
+
+[ext_resource type="Texture2D" uid="uid://c2ih08t74tjfr" path="res://assets/ui/textbox/textbox_v1.png" id="1_mkpd7"]
+[ext_resource type="Script" path="res://scripts/ui/JournalUI.gd" id="1_vl2l7"]
+[ext_resource type="Texture2D" uid="uid://c1vvjliprhv3e" path="res://assets/ui/panels/menu_title_panel1.png" id="2_06xfj"]
+[ext_resource type="FontFile" uid="uid://dn8jthylka01q" path="res://assets/fonts/AtlantisHeadline-Bold.ttf" id="3_1ccvo"]
+[ext_resource type="FontFile" uid="uid://bav4y6s1kjr56" path="res://assets/fonts/AtlantisHeadline-Bold.otf" id="4_dcwyv"]
+[ext_resource type="Theme" uid="uid://8ljahhyhocjx" path="res://assets/themes/UI.tres" id="5_pe7ct"]
+[ext_resource type="FontFile" uid="uid://dxdarhen86t2h" path="res://assets/fonts/Minecraft-Regular.otf" id="6_2v87u"]
+[ext_resource type="Texture2D" uid="uid://mxahwukmmdcg" path="res://assets/ui/map/map_bg.png" id="7_wxsdv"]
+[ext_resource type="Texture2D" uid="uid://yr20o45k5g46" path="res://assets/ui/pfp-mask.png" id="8_0lyfm"]
+[ext_resource type="Texture2D" uid="uid://cgha6ryejpokt" path="res://assets/ui/map/chap1_map.png" id="8_pdoje"]
+[ext_resource type="Texture2D" uid="uid://c6p104tr8qc7g" path="res://assets/portraits/BaseNPC_Portrait.png" id="8_xkg3n"]
+[ext_resource type="Texture2D" uid="uid://cbuluvgeoht7n" path="res://assets/ui/map/player_house.png" id="9_x6bu5"]
+[ext_resource type="Texture2D" uid="uid://bdus6grgj0fde" path="res://assets/ui/map/active_academe.png" id="10_bnh8t"]
+[ext_resource type="Texture2D" uid="uid://dcd2sl3cxlwyy" path="res://assets/ui/placeholder/cross.png" id="10_brddx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ra5vd"]
+texture = ExtResource("1_mkpd7")
+texture_margin_left = 44.5302
+texture_margin_top = 45.0
+texture_margin_right = 45.0
+texture_margin_bottom = 45.0
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 7.0
+expand_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_73mqb"]
+texture = ExtResource("2_06xfj")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+region_rect = Rect2(0, 0, 720, 720)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fq2t"]
+bg_color = Color(0.74902, 0.494118, 0.388235, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 25.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g82mn"]
+bg_color = Color(0, 0, 0, 0.431373)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 25.0
+
+[sub_resource type="Theme" id="Theme_4s5s4"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_4fq2t")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_g82mn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4dmbs"]
+texture = ExtResource("1_mkpd7")
+texture_margin_left = 45.0
+texture_margin_top = 45.0
+texture_margin_right = 45.0
+texture_margin_bottom = 45.0
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 7.0
+expand_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ss2r"]
+texture = ExtResource("7_wxsdv")
+texture_margin_left = 39.9019
+texture_margin_top = 40.0
+texture_margin_right = 40.0
+texture_margin_bottom = 40.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lkfgw"]
+texture = ExtResource("1_mkpd7")
+texture_margin_left = 45.0
+texture_margin_top = 45.0
+texture_margin_right = 45.0
+texture_margin_bottom = 45.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_drghb"]
+texture = ExtResource("1_mkpd7")
+texture_margin_left = 64.0
+texture_margin_top = 64.0
+texture_margin_right = 64.0
+texture_margin_bottom = 64.0
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 7.0
+expand_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ntinl"]
+bg_color = Color(0.75, 0.498, 0.39, 0.498039)
+
+[node name="JournalUI" type="CanvasLayer"]
+script = ExtResource("1_vl2l7")
+
+[node name="BackgroundPanel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 48.0
+offset_right = -48.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ra5vd")
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Lessons" type="VBoxContainer" parent="BackgroundPanel/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="TitleMargin" type="MarginContainer" parent="BackgroundPanel/MarginContainer/Lessons"]
+layout_mode = 2
+theme_override_constants/margin_right = 140
+
+[node name="PageTitlePanel" type="Panel" parent="BackgroundPanel/MarginContainer/Lessons/TitleMargin"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_73mqb")
+
+[node name="CenterContainer" type="CenterContainer" parent="BackgroundPanel/MarginContainer/Lessons/TitleMargin/PageTitlePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="BackgroundPanel/MarginContainer/Lessons/TitleMargin/PageTitlePanel/CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.819608, 0.666667, 0.223529, 1)
+theme_override_colors/font_shadow_color = Color(0.521569, 0.309804, 0.0705882, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_1ccvo")
+theme_override_font_sizes/font_size = 36
+text = "Roadmap"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BackgroundPanel/MarginContainer/Lessons"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_4s5s4")
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/margin_right = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="Chap1Label" type="Panel" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4dmbs")
+
+[node name="CenterContainer" type="CenterContainer" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer/Chap1Label"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -11.5
+offset_right = 81.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer/Chap1Label/CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_dcwyv")
+theme_override_font_sizes/font_size = 32
+text = "Chapter 1"
+
+[node name="printBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "1. Using the 'print()' function"
+autowrap_mode = 2
+
+[node name="datatypesBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "2. Common Python Data Types"
+autowrap_mode = 2
+
+[node name="varsBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "3. Using Variables"
+autowrap_mode = 2
+
+[node name="commentsBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "4. Adding Comments to your script"
+autowrap_mode = 2
+
+[node name="inputBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "5. Accepting Input"
+autowrap_mode = 2
+
+[node name="varnamingBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "6. Naming Variables"
+autowrap_mode = 2
+
+[node name="arithmeticopBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "7. Arithmetic Operators"
+autowrap_mode = 2
+
+[node name="assignmentopBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "8. Assignment Operators"
+autowrap_mode = 2
+
+[node name="comparisonopBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "9. Comparison Operators"
+autowrap_mode = 2
+
+[node name="logicalopBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "10. Logical Operators"
+autowrap_mode = 2
+
+[node name="indentationBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "11. Indentation"
+autowrap_mode = 2
+
+[node name="ifelseBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "12. If-Else Statements"
+autowrap_mode = 2
+
+[node name="matchBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "13. Match-Case Statements"
+autowrap_mode = 2
+
+[node name="Chap2Label" type="Panel" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4dmbs")
+
+[node name="CenterContainer" type="CenterContainer" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer/Chap2Label"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.5
+offset_top = -11.5
+offset_right = 81.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer/Chap2Label/CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_dcwyv")
+theme_override_font_sizes/font_size = 32
+text = "Chapter 2"
+
+[node name="forLoopBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "14. For Loops"
+autowrap_mode = 2
+
+[node name="whileLoopBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "15. While Loops"
+autowrap_mode = 2
+
+[node name="listsBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "16. Lists"
+autowrap_mode = 2
+
+[node name="funcBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "17. Functions"
+autowrap_mode = 2
+
+[node name="funcParamBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "18. Function Parameters"
+autowrap_mode = 2
+
+[node name="funcReturnBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "19. Function Return Values"
+autowrap_mode = 2
+
+[node name="listToFuncBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "20. Passing Lists to Functions"
+autowrap_mode = 2
+
+[node name="loopAndFuncBtn" type="Button" parent="BackgroundPanel/MarginContainer/Lessons/ScrollContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 0.943333, 0.66, 1)
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("5_pe7ct")
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "21. Combining Loops and Functions"
+autowrap_mode = 2
+
+[node name="CloseLessons" type="Button" parent="BackgroundPanel/MarginContainer/Lessons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme = ExtResource("5_pe7ct")
+text = "CLOSE  ROADMAP"
+icon_alignment = 1
+
+[node name="Map" type="VBoxContainer" parent="BackgroundPanel/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="TitleMargin" type="MarginContainer" parent="BackgroundPanel/MarginContainer/Map"]
+layout_mode = 2
+theme_override_constants/margin_right = 140
+
+[node name="PageTitlePanel" type="Panel" parent="BackgroundPanel/MarginContainer/Map/TitleMargin"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_73mqb")
+
+[node name="CenterContainer" type="CenterContainer" parent="BackgroundPanel/MarginContainer/Map/TitleMargin/PageTitlePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="BackgroundPanel/MarginContainer/Map/TitleMargin/PageTitlePanel/CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.819608, 0.666667, 0.223529, 1)
+theme_override_colors/font_shadow_color = Color(0.521569, 0.309804, 0.0705882, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_1ccvo")
+theme_override_font_sizes/font_size = 36
+text = "Map
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MapPanel" type="Panel" parent="BackgroundPanel/MarginContainer/Map"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_3ss2r")
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundPanel/MarginContainer/Map/MapPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 45
+theme_override_constants/margin_bottom = 45
+
+[node name="MapTexture" type="TextureRect" parent="BackgroundPanel/MarginContainer/Map/MapPanel/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("8_pdoje")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ActiveTexture" type="TextureRect" parent="BackgroundPanel/MarginContainer/Map/MapPanel/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("10_bnh8t")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="PlayerTexture" type="TextureRect" parent="BackgroundPanel/MarginContainer/Map/MapPanel/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("9_x6bu5")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="CloseMap" type="Button" parent="BackgroundPanel/MarginContainer/Map"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme = ExtResource("5_pe7ct")
+text = "CLOSE  MAP"
+icon_alignment = 1
+
+[node name="JournalMenu" type="VBoxContainer" parent="BackgroundPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundPanel/MarginContainer/JournalMenu"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_constants/margin_right = 150
+
+[node name="scorePanel" type="Panel" parent="BackgroundPanel/MarginContainer/JournalMenu/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_lkfgw")
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundPanel/MarginContainer/JournalMenu/MarginContainer/scorePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 45
+theme_override_constants/margin_bottom = 45
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BackgroundPanel/MarginContainer/JournalMenu/MarginContainer/scorePanel/MarginContainer"]
+layout_mode = 2
+
+[node name="PointTitle" type="Label" parent="BackgroundPanel/MarginContainer/JournalMenu/MarginContainer/scorePanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_2v87u")
+theme_override_font_sizes/font_size = 40
+text = "Points:"
+vertical_alignment = 1
+
+[node name="Points" type="Label" parent="BackgroundPanel/MarginContainer/JournalMenu/MarginContainer/scorePanel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_2v87u")
+theme_override_font_sizes/font_size = 40
+text = "00000"
+vertical_alignment = 1
+
+[node name="TaskPanel" type="Panel" parent="BackgroundPanel/MarginContainer/JournalMenu"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_drghb")
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundPanel/MarginContainer/JournalMenu/TaskPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 45
+theme_override_constants/margin_top = 45
+theme_override_constants/margin_right = 45
+theme_override_constants/margin_bottom = 45
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundPanel/MarginContainer/JournalMenu/TaskPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="TaskTitle" type="Label" parent="BackgroundPanel/MarginContainer/JournalMenu/TaskPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_pe7ct")
+text = "Current  Task"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PortraitMask" type="TextureRect" parent="BackgroundPanel/MarginContainer/JournalMenu/TaskPanel/MarginContainer/VBoxContainer"]
+clip_children = 1
+custom_minimum_size = Vector2(350, 350)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("8_0lyfm")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="BackgroundPanel/MarginContainer/JournalMenu/TaskPanel/MarginContainer/VBoxContainer/PortraitMask"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ntinl")
+
+[node name="NPCPortrait" type="TextureRect" parent="BackgroundPanel/MarginContainer/JournalMenu/TaskPanel/MarginContainer/VBoxContainer/PortraitMask"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+texture = ExtResource("8_xkg3n")
+stretch_mode = 5
+
+[node name="npcName" type="Label" parent="BackgroundPanel/MarginContainer/JournalMenu/TaskPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("5_pe7ct")
+theme_override_font_sizes/font_size = 36
+text = "NPC Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="npcLocation" type="Label" parent="BackgroundPanel/MarginContainer/JournalMenu/TaskPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("5_pe7ct")
+text = "NPC Location"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="npcTask" type="Label" parent="BackgroundPanel/MarginContainer/JournalMenu/TaskPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+theme = ExtResource("5_pe7ct")
+theme_override_fonts/font = ExtResource("6_2v87u")
+theme_override_font_sizes/font_size = 32
+text = "NPC TASK"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BackgroundPanel/MarginContainer/JournalMenu"]
+layout_mode = 2
+
+[node name="LessonButton" type="Button" parent="BackgroundPanel/MarginContainer/JournalMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.18
+theme = ExtResource("5_pe7ct")
+text = "Roadmap"
+icon_alignment = 1
+
+[node name="MapButton" type="Button" parent="BackgroundPanel/MarginContainer/JournalMenu/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.18
+theme = ExtResource("5_pe7ct")
+text = "Map"
+icon_alignment = 1
+
+[node name="CloseButton" type="Button" parent="BackgroundPanel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -192.0
+offset_top = 56.0
+offset_right = 48.0
+offset_bottom = 269.0
+grow_horizontal = 0
+scale = Vector2(0.6, 0.6)
+theme = ExtResource("5_pe7ct")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0.666667)
+icon = ExtResource("10_brddx")
+icon_alignment = 1

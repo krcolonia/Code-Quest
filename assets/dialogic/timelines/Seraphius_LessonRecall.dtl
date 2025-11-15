@@ -1,0 +1,9 @@
+ElderSeraphius: We can use the 'print()' function to make Python print out an output to console!
+join ElderSeraphius 0
+ElderSeraphius: If you want to print a string value,[pause=0.25] you can use 'print()' like so:[br][br]print('Hello, World!')[br][br]This will output 'Hello, World!'
+ElderSeraphius: You can also print numerical values using print![pause=0.25] For example:[br][br]print(100)[br][br]This will output '100'
+ElderSeraphius: Another example, this time printing a number with decimals:[br][br]print(15.0)[br][br]This will output '15.0'
+ElderSeraphius: We can use the special [b]\n[/b] character to print new lines in the same 'print()' call
+ElderSeraphius: For example, if we print like this:[br][br]print('Hello,\nWorld!')[br][br]Output will be:[br][br]'Hello,'[br]'World!'
+ElderSeraphius: Lastly, we can use either the '+' symbol or a comma to connect multiple values to print!
+ElderSeraphius:For example:[br][br]print('Hello,','World!')[br]print('Hello, ' + 'World!')[br][br]Both will print out 'Hello, World!'

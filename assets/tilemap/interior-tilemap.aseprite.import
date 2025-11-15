@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dlobsk38h8rfy"
+path="res://.godot/imported/interior-tilemap.aseprite-31863526498fa88e1404051bbb428145.res"
+
+[deps]
+
+source_file="res://assets/tilemap/interior-tilemap.aseprite"
+dest_files=["res://.godot/imported/interior-tilemap.aseprite-31863526498fa88e1404051bbb428145.res"]
+
+[params]
+

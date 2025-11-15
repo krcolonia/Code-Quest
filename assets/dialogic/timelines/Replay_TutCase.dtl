@@ -1,0 +1,12 @@
+[style name="TutorialStyle"]
+When you press that button, a panel slides down and shows a button and 2 boxes
+label RetryPoint
+The button at the very top allows you to replay the lesson connected with the activity.
+The box on top describes the problem and specific instructions for the output
+The box below shows the test cases your output will be compared with.
+The test cases ensure the your scripts are able to satisfy the current problems criteria.
+Would you like to repeat this section?
+- Yes
+	jump RetryPoint
+- No, end the tutorial
+	[end_timeline]

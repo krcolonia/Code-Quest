@@ -1,0 +1,435 @@
+[gd_scene load_steps=36 format=3 uid="uid://cs7ww2ibmq1gs"]
+
+[ext_resource type="Script" path="res://scripts/menus/MainMenu.gd" id="1_wchry"]
+[ext_resource type="Texture2D" uid="uid://d3fdmf755ixsf" path="res://assets/background/MenuBG.png" id="2_6iyt1"]
+[ext_resource type="Texture2D" uid="uid://1w4ck4sxfvgw" path="res://assets/fx/Leaves-Sheet.png" id="3_kgr7k"]
+[ext_resource type="Texture2D" uid="uid://bnsajq482nhml" path="res://assets/ui/NewGameTitle.png" id="4_eqnj5"]
+[ext_resource type="Theme" uid="uid://8ljahhyhocjx" path="res://assets/themes/UI.tres" id="5_6ow6f"]
+[ext_resource type="PackedScene" uid="uid://ddqvi0gbh6t5f" path="res://scenes/menus/SettingsMenu.tscn" id="6_8bkpb"]
+[ext_resource type="Script" path="res://addons/monitor_overlay/monitor_overlay.gd" id="6_u8yeq"]
+[ext_resource type="Texture2D" uid="uid://cwyc4ashv2s7u" path="res://assets/ui/placeholder/medal2.png" id="7_mjgrm"]
+[ext_resource type="PackedScene" uid="uid://c81wvp3l3ayh" path="res://scenes/menus/ProfileMenu.tscn" id="9_cy111"]
+[ext_resource type="Texture2D" uid="uid://cl5gjj2d1gr21" path="res://assets/ui/placeholder/leaderboardsComplex.png" id="9_hhtyy"]
+[ext_resource type="Texture2D" uid="uid://b0a1vpt6hfvg6" path="res://assets/portraits/default.png" id="9_j2lu1"]
+[ext_resource type="PackedScene" uid="uid://ita8fq01n1ro" path="res://scenes/menus/Leaderboard.tscn" id="10_2wdfa"]
+[ext_resource type="Texture2D" uid="uid://k08obcjrdrrb" path="res://assets/ui/placeholder/gear.png" id="10_8ns66"]
+[ext_resource type="PackedScene" uid="uid://87sbyusxms1y" path="res://scenes/menus/AchievementMenu.tscn" id="14_alwbl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7slh"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt02h"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hkff"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0by4"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kdw3"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(0, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4m7n"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(150, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81p1q"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(300, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi5cw"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(450, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qa78"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(0, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t71gj"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(150, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbeea"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(300, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1js0v"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(450, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wggu"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(0, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfbrc"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(150, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_718i1"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(300, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wblkm"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(450, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqljp"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(0, 600, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msfb7"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(150, 600, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_278gk"]
+atlas = ExtResource("3_kgr7k")
+region = Rect2(300, 600, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hmhy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7slh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt02h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hkff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0by4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kdw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4m7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81p1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vi5cw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qa78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t71gj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbeea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1js0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wggu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfbrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_718i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wblkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqljp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msfb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_278gk")
+}],
+"loop": true,
+"name": &"Leaf",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ahc0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_color = Color(0, 0, 0, 0.317647)
+shadow_size = 25
+
+[node name="Main Menu" type="CanvasLayer"]
+script = ExtResource("1_wchry")
+metadata/_edit_vertical_guides_ = [720.0, 360.0]
+
+[node name="BGCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BG Image" type="TextureRect" parent="BGCanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6iyt1")
+expand_mode = 1
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimLeaves" type="AnimatedSprite2D" parent="BGCanvasLayer"]
+process_mode = 3
+texture_filter = 1
+scale = Vector2(4.8, 8.53333)
+sprite_frames = SubResource("SpriteFrames_0hmhy")
+animation = &"Leaf"
+autoplay = "Leaf"
+frame_progress = 0.021174
+speed_scale = 1.75
+centered = false
+
+[node name="Title" type="Control" parent="BGCanvasLayer"]
+layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.289
+anchor_right = 0.5
+anchor_bottom = 0.289
+offset_top = 0.0799866
+offset_bottom = 0.0799866
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+
+[node name="TitleTexture" type="TextureRect" parent="BGCanvasLayer/Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -114.286
+offset_right = 250.0
+offset_bottom = 85.7143
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_eqnj5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="BGCanvasLayer/Title"]
+layout_mode = 0
+offset_left = 5.71429
+offset_top = 117.857
+offset_right = 45.7143
+offset_bottom = 157.857
+use_top_left = true
+
+[node name="InputCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MenuBtns" type="VBoxContainer" parent="InputCanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.144
+anchor_top = 0.441
+anchor_right = 0.856
+anchor_bottom = 0.806
+offset_left = 0.319992
+offset_top = -0.480042
+offset_right = -0.320068
+offset_bottom = 0.319946
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="StartBtn" type="Button" parent="InputCanvasLayer/MenuBtns"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme = ExtResource("5_6ow6f")
+theme_override_font_sizes/font_size = 44
+action_mode = 0
+text = "START"
+
+[node name="MarginContainer" type="MarginContainer" parent="InputCanvasLayer/MenuBtns"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_right = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InputCanvasLayer/MenuBtns/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SettingBtn" type="Button" parent="InputCanvasLayer/MenuBtns/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_6ow6f")
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS"
+expand_icon = true
+
+[node name="ProfileBtn" type="Button" parent="InputCanvasLayer/MenuBtns/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_6ow6f")
+theme_override_font_sizes/font_size = 32
+text = "USER PROFILE"
+expand_icon = true
+
+[node name="ExitBtn" type="Button" parent="InputCanvasLayer/MenuBtns/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_6ow6f")
+theme_override_font_sizes/font_size = 32
+action_mode = 0
+text = "EXIT"
+expand_icon = true
+
+[node name="MonitorOverlay" type="VBoxContainer" parent="InputCanvasLayer"]
+visible = false
+custom_minimum_size = Vector2(300, 0)
+offset_right = 300.0
+offset_bottom = 266.0
+script = ExtResource("6_u8yeq")
+process = true
+static_memory = true
+video_memory = true
+texture_memory = true
+
+[node name="BottomMenuBtns" type="Control" parent="InputCanvasLayer"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -24.3201
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="shadowPanel" type="Panel" parent="InputCanvasLayer/BottomMenuBtns"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 75.984
+anchor_bottom = 75.984
+offset_left = -184.0
+offset_top = -72.3201
+offset_right = 184.0
+offset_bottom = -32.3201
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ahc0")
+
+[node name="achieveBtn" type="Button" parent="InputCanvasLayer/BottomMenuBtns"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -120.0
+offset_right = -80.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_6ow6f")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0.666667)
+theme_override_icons/icon = ExtResource("7_mjgrm")
+icon_alignment = 1
+expand_icon = true
+
+[node name="leaderboardBtn" type="Button" parent="InputCanvasLayer/BottomMenuBtns"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -136.0
+offset_right = 64.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_6ow6f")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0.666667)
+theme_override_icons/icon = ExtResource("9_hhtyy")
+icon_alignment = 1
+expand_icon = true
+
+[node name="settingsBtn" type="Button" parent="InputCanvasLayer/BottomMenuBtns"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = -120.0
+offset_right = 192.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("5_6ow6f")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 0.666667)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0.666667)
+theme_override_icons/icon = ExtResource("10_8ns66")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SettingsMenu" parent="." instance=ExtResource("6_8bkpb")]
+unique_name_in_owner = true
+visible = false
+
+[node name="LogoutButton" parent="SettingsMenu/MarginContainer/Panel/MarginContainer/SettingsVBox/MarginButtons/ButtonsVBox" index="0"]
+text = "SIGN OUT"
+
+[node name="ReturnButton" parent="SettingsMenu/MarginContainer/Panel/MarginContainer/SettingsVBox/MarginButtons/ButtonsVBox" index="1"]
+text = "CLOSE"
+
+[node name="ProfileMenu" parent="." instance=ExtResource("9_cy111")]
+unique_name_in_owner = true
+visible = false
+
+[node name="ProfilePhoto" parent="ProfileMenu/MarginContainer/Panel/MarginContainer/VBoxContainer/ProfileContainer/PfpMask" index="0"]
+texture = ExtResource("9_j2lu1")
+
+[node name="Leaderboard" parent="." instance=ExtResource("10_2wdfa")]
+unique_name_in_owner = true
+visible = false
+
+[node name="CloseBtn" parent="Leaderboard/MarginContainer/Panel/MarginContainer/VBoxContainer" index="2"]
+text = "CLOSE"
+
+[node name="AchievementMenu" parent="." instance=ExtResource("14_alwbl")]
+visible = false
+
+[connection signal="button_up" from="InputCanvasLayer/MenuBtns/StartBtn" to="." method="_on_start_btn_button_up"]
+[connection signal="button_up" from="InputCanvasLayer/MenuBtns/MarginContainer/VBoxContainer/SettingBtn" to="." method="_on_setting_btn_up"]
+[connection signal="button_up" from="InputCanvasLayer/MenuBtns/MarginContainer/VBoxContainer/ProfileBtn" to="." method="_on_profile_btn_button_up"]
+[connection signal="button_up" from="InputCanvasLayer/MenuBtns/MarginContainer/VBoxContainer/ExitBtn" to="." method="_on_exit_btn_button_up"]
+[connection signal="button_up" from="SettingsMenu/MarginContainer/Panel/MarginContainer/SettingsVBox/MarginButtons/ButtonsVBox/ReturnButton" to="." method="_on_close_settings_button_up"]
+[connection signal="button_up" from="ProfileMenu/MarginContainer/Panel/CloseButton" to="." method="_on_close_profile_button_up"]
+[connection signal="button_up" from="Leaderboard/MarginContainer/Panel/MarginContainer/VBoxContainer/CloseBtn" to="." method="_on_close_leaderboard_button_up"]
+
+[editable path="SettingsMenu"]
+[editable path="ProfileMenu"]
+[editable path="Leaderboard"]
+[editable path="AchievementMenu"]

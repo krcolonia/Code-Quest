@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dblygkkw4865j"]
+
+[ext_resource type="Texture2D" uid="uid://4ye580268isn" path="res://assets/object/bed_bottom-layer.png" id="1_utbg4"]
+[ext_resource type="Texture2D" uid="uid://d1536s1aqjxy7" path="res://assets/object/bed_top-layer.png" id="2_j8hek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ir4x"]
+size = Vector2(16, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mt6cy"]
+size = Vector2(16, 2)
+
+[node name="Bed" type="Node2D"]
+
+[node name="BottomLayer" type="Sprite2D" parent="."]
+texture = ExtResource("1_utbg4")
+
+[node name="TopLayer" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 8)
+texture = ExtResource("2_j8hek")
+offset = Vector2(0, -8)
+
+[node name="CollisionBody" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="BottomCollision" type="CollisionShape2D" parent="CollisionBody"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_1ir4x")
+
+[node name="TopCollision" type="CollisionShape2D" parent="CollisionBody"]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_mt6cy")

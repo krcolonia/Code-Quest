@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy1y14inwkplb"]
+
+[ext_resource type="Script" path="res://assets/dialogic_styles/CustomDialogueTheme/CustomPortrait/5Portraits/vn_portrait_layer.gd" id="1_1i7em"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Character/node_portrait_container.gd" id="1_rxdcc"]
+
+[node name="VN_PortraitLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_1i7em")
+
+[node name="Portraits" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 280.0
+offset_bottom = -460.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DialogicNode_PortraitContainer1" type="Control" parent="Portraits"]
+layout_mode = 1
+anchor_left = 0.372
+anchor_right = 0.626
+anchor_bottom = 1.0
+offset_left = -0.339996
+offset_right = -0.0950317
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_rxdcc")
+container_ids = PackedStringArray("left", "0")
+
+[node name="DialogicNode_PortraitContainer2" type="Control" parent="Portraits"]
+layout_mode = 1
+anchor_left = 0.372
+anchor_right = 0.626
+anchor_bottom = 1.0
+offset_left = -0.339996
+offset_right = -0.0950317
+mouse_filter = 2
+script = ExtResource("1_rxdcc")
+container_ids = PackedStringArray("right", "1")
+mirrored = true
+metadata/_edit_use_anchors_ = true

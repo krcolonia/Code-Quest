@@ -1,0 +1,20 @@
+[style name="TutorialStyle"]
+Alright kid, let me take care of this for you so you can see how it's done, watch and listen closely!
+For an identification seal, all you'd need to do is print out your Name and your Gender
+So, as an example, I'll create an identification seal for myself!
+First, I will write down the[signal=tut_code1] 'print()' under the 'main()' method
+As you can see, I made 2 'print()' methods, each for my Name and Gender.
+Notice that I also put the words that I want to print out inside of single quote marks
+This is important! Not using the single quote marks will give you an error!
+Whatever is written under the 'main()' method will be executed when you press 'Run Code!'
+So if we press the 'Run Code' button right now, it will only print[signal=tut_output1] the empty Name and Gender
+Now, I'll put my name and gender in their respective 'print()' methods like so![signal=tut_code2]
+Then, we can now run the code!
+If we run this code I put in, it will print my name and my gender like so![signal=tut_output2]
+Now, let's make your identification seal!
+I'll go ahead and change the name and gender to show yours, just like this![signal=tut_code3]
+Now if we run this, we will get [signal=tut_output3]this output!
+Here's your identification seal, kid! All made with authentic Python magic!
+Be sure to show these to the guards so they let ya in.
+Oh, and if you wanna review this, you can go back to your journal to view lessons like these!
+Or just visit me back here at the Tavern, I'll be staying here anyways!

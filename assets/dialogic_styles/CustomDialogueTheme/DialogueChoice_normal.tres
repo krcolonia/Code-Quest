@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://5mvbkuv7wkyn"]
+
+[ext_resource type="Texture2D" uid="uid://clb0j3653k2ua" path="res://assets/ui/buttons/dialog_button_up.png" id="1_e757u"]
+
+[resource]
+texture = ExtResource("1_e757u")
+texture_margin_left = 23.9386
+texture_margin_top = 18.1367
+texture_margin_right = 23.9631
+texture_margin_bottom = 34.7597

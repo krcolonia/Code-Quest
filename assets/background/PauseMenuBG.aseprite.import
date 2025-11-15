@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bidegtytpbmf1"
+path="res://.godot/imported/PauseMenuBG.aseprite-fc03d2256e430afc35c01fa8c31b311a.res"
+
+[deps]
+
+source_file="res://assets/background/PauseMenuBG.aseprite"
+dest_files=["res://.godot/imported/PauseMenuBG.aseprite-fc03d2256e430afc35c01fa8c31b311a.res"]
+
+[params]
+

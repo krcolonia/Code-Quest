@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwy47v2rh0gdb"]
+
+[ext_resource type="Script" path="res://scripts/gameplay/interaction/single_door_interaction.gd" id="1_lhn80"]
+[ext_resource type="Texture2D" uid="uid://cfpcacxfn1pq3" path="res://assets/object/doors/door_single.png" id="1_ri3xd"]
+[ext_resource type="PackedScene" uid="uid://dmmv4ljcluhnb" path="res://scenes/interaction/interaction_area/interaction_area.tscn" id="2_82r5v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4ws3"]
+size = Vector2(12, 6)
+
+[node name="SingleDoor" type="Node2D"]
+script = ExtResource("1_lhn80")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ri3xd")
+
+[node name="InteractionArea" parent="Sprite2D" instance=ExtResource("2_82r5v")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/InteractionArea"]
+position = Vector2(0, 19)
+shape = SubResource("RectangleShape2D_p4ws3")
+debug_color = Color(1, 0, 0.0901961, 0.419608)

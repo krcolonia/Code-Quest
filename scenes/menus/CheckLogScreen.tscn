@@ -1,0 +1,304 @@
+[gd_scene load_steps=31 format=3 uid="uid://c1tnooku1vcuw"]
+
+[ext_resource type="Script" path="res://scripts/backend/CheckLogScreen.gd" id="1_kmcnr"]
+[ext_resource type="Texture2D" uid="uid://d3fdmf755ixsf" path="res://assets/background/MenuBG.png" id="2_ee0iq"]
+[ext_resource type="Texture2D" uid="uid://1w4ck4sxfvgw" path="res://assets/fx/Leaves-Sheet.png" id="3_u8ky2"]
+[ext_resource type="Theme" uid="uid://8ljahhyhocjx" path="res://assets/themes/UI.tres" id="4_qcmts"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7slh"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt02h"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hkff"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0by4"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kdw3"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(0, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4m7n"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(150, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81p1q"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(300, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi5cw"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(450, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qa78"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(0, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t71gj"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(150, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbeea"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(300, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1js0v"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(450, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wggu"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(0, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfbrc"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(150, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_718i1"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(300, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wblkm"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(450, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqljp"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(0, 600, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msfb7"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(150, 600, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_278gk"]
+atlas = ExtResource("3_u8ky2")
+region = Rect2(300, 600, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hmhy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7slh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt02h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hkff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0by4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kdw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4m7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81p1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vi5cw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qa78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t71gj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbeea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1js0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wggu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfbrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_718i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wblkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqljp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msfb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_278gk")
+}],
+"loop": true,
+"name": &"Leaf",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlb73"]
+bg_color = Color(0, 0, 0, 0.501961)
+
+[sub_resource type="Animation" id="Animation_l745t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGCanvasLayer/Panel/MarginContainer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Checking Account"]
+}
+
+[sub_resource type="Animation" id="Animation_16dca"]
+resource_name = "checking_account"
+length = 1.6
+loop_mode = 1
+step = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGCanvasLayer/Panel/MarginContainer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Checking Account", "Checking Account .", "Checking Account . .", "Checking Account . . ."]
+}
+
+[sub_resource type="Animation" id="Animation_kearj"]
+resource_name = "checking_connection"
+length = 1.6
+loop_mode = 1
+step = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGCanvasLayer/Panel/MarginContainer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Checking Internet
+Connection", "Checking Internet
+Connection .", "Checking Internet
+Connection . .", "Checking Internet
+Connection . . ."]
+}
+
+[sub_resource type="Animation" id="Animation_racbf"]
+resource_name = "checking_save"
+length = 1.6
+loop_mode = 1
+step = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGCanvasLayer/Panel/MarginContainer/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Checking Save File", "Checking Save File .", "Checking Save File . .", "Checking Save File . . ."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jcf64"]
+_data = {
+"RESET": SubResource("Animation_l745t"),
+"checking_account": SubResource("Animation_16dca"),
+"checking_connection": SubResource("Animation_kearj"),
+"checking_save": SubResource("Animation_racbf")
+}
+
+[node name="CheckingLog" type="CanvasLayer"]
+script = ExtResource("1_kmcnr")
+metadata/_edit_vertical_guides_ = [720.0, 360.0]
+
+[node name="BGCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BG Image" type="TextureRect" parent="BGCanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ee0iq")
+expand_mode = 1
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimLeaves" type="AnimatedSprite2D" parent="BGCanvasLayer"]
+process_mode = 3
+texture_filter = 1
+scale = Vector2(4.8, 8.53333)
+sprite_frames = SubResource("SpriteFrames_0hmhy")
+animation = &"Leaf"
+autoplay = "Leaf"
+frame_progress = 0.021174
+speed_scale = 1.75
+centered = false
+
+[node name="Panel" type="Panel" parent="BGCanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mlb73")
+
+[node name="MarginContainer" type="MarginContainer" parent="BGCanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 65
+theme_override_constants/margin_top = 65
+theme_override_constants/margin_right = 65
+theme_override_constants/margin_bottom = 65
+
+[node name="Label" type="Label" parent="BGCanvasLayer/Panel/MarginContainer"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("4_qcmts")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Checking Account"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CheckInternet" type="HTTPRequest" parent="."]
+
+[node name="RefreshToken" type="HTTPRequest" parent="."]
+
+[node name="RetrieveUsername" type="HTTPRequest" parent="."]
+
+[node name="CheckIDToken" type="HTTPRequest" parent="."]
+use_threads = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jcf64")
+}

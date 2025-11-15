@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b7fgt5ac20445"
+path="res://.godot/imported/KurticDynamic.aseprite-a1b3412ccbd4324ccde908fa9a60666a.res"
+
+[deps]
+
+source_file="res://assets/ui/KurticDynamic.aseprite"
+dest_files=["res://.godot/imported/KurticDynamic.aseprite-a1b3412ccbd4324ccde908fa9a60666a.res"]
+
+[params]
+
