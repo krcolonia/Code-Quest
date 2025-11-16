@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bir1o4mf50vd7"
+path="res://.godot/imported/objects-furniture.aseprite-03b1ef5cc9c295b1e21c9390a0ffc347.res"
+
+[deps]
+
+source_file="res://assets/object/objects-furniture.aseprite"
+dest_files=["res://.godot/imported/objects-furniture.aseprite-03b1ef5cc9c295b1e21c9390a0ffc347.res"]
+
+[params]
+

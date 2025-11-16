@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://8tlaic0lavf7"]
+
+[ext_resource type="Texture2D" uid="uid://dnkmfsmr1iq41" path="res://assets/ui/buttons/tut_button_down.png" id="1_bn5bg"]
+
+[resource]
+texture = ExtResource("1_bn5bg")
+texture_margin_left = 23.9386
+texture_margin_top = 24.0792
+texture_margin_right = 23.9631
+texture_margin_bottom = 29.5457

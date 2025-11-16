@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://1kpgsbx2j160"
+path="res://.godot/imported/Placeholder_Player.aseprite-65091bee81cd6cfdfa2915e6b0ab8f04.res"
+
+[deps]
+
+source_file="res://assets/player/Placeholder_Player.aseprite"
+dest_files=["res://.godot/imported/Placeholder_Player.aseprite-65091bee81cd6cfdfa2915e6b0ab8f04.res"]
+
+[params]
+

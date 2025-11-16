@@ -1,0 +1,262 @@
+[gd_scene load_steps=21 format=3 uid="uid://ddqvi0gbh6t5f"]
+
+[ext_resource type="Texture2D" uid="uid://ckmka8s08c8la" path="res://assets/background/PauseMenuBG.png" id="1_01lvq"]
+[ext_resource type="Script" path="res://scripts/ui/SettingsMenu.gd" id="1_jydv6"]
+[ext_resource type="Texture2D" uid="uid://c1vvjliprhv3e" path="res://assets/ui/panels/menu_title_panel1.png" id="2_nibjw"]
+[ext_resource type="FontFile" uid="uid://dn8jthylka01q" path="res://assets/fonts/AtlantisHeadline-Bold.ttf" id="3_8rvon"]
+[ext_resource type="Texture2D" uid="uid://bbj1twipgclwn" path="res://assets/ui/placeholder/musicOn.png" id="4_2sp23"]
+[ext_resource type="Texture2D" uid="uid://isv1rqb3ehgx" path="res://assets/ui/placeholder/audioOn.png" id="5_6rydq"]
+[ext_resource type="Theme" uid="uid://8ljahhyhocjx" path="res://assets/themes/UI.tres" id="5_lk41b"]
+[ext_resource type="FontFile" uid="uid://dxdarhen86t2h" path="res://assets/fonts/Minecraft-Regular.otf" id="7_fitc7"]
+[ext_resource type="FontFile" uid="uid://qd7ycd7kkcx5" path="res://assets/fonts/Minecraft-Bold.otf" id="8_7ol3v"]
+[ext_resource type="Texture2D" uid="uid://cqbwe6dlomtaj" path="res://assets/ui/checkbox/check_square_grey_checkmark.png" id="8_ec6rt"]
+[ext_resource type="Texture2D" uid="uid://y62rjv8so4jh" path="res://assets/ui/checkbox/check_round_grey_circle.png" id="9_6l3ol"]
+[ext_resource type="Texture2D" uid="uid://q682h7qmstcl" path="res://assets/ui/checkbox/check_round_grey.png" id="10_g5qt2"]
+[ext_resource type="Texture2D" uid="uid://cx1onici47gf" path="res://assets/ui/checkbox/check_square_grey.png" id="11_1g8da"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eju12"]
+texture = ExtResource("1_01lvq")
+texture_margin_left = 52.0
+texture_margin_top = 52.0
+texture_margin_right = 52.0
+texture_margin_bottom = 52.0
+
+[sub_resource type="Theme" id="Theme_4y83b"]
+Panel/styles/panel = SubResource("StyleBoxTexture_eju12")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k6rhi"]
+texture = ExtResource("2_nibjw")
+texture_margin_left = 60.0
+texture_margin_top = 60.0
+texture_margin_right = 60.0
+texture_margin_bottom = 60.0
+region_rect = Rect2(0, 0, 720, 720)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4uxf2"]
+
+[sub_resource type="Theme" id="Theme_hvqxr"]
+CheckBox/colors/font_color = Color(1, 1, 1, 1)
+CheckBox/constants/h_separation = 17
+CheckBox/constants/outline_size = 8
+CheckBox/font_sizes/font_size = 16
+CheckBox/fonts/font = ExtResource("3_8rvon")
+CheckBox/icons/checked = ExtResource("8_ec6rt")
+CheckBox/icons/radio_checked = ExtResource("9_6l3ol")
+CheckBox/icons/radio_unchecked = ExtResource("10_g5qt2")
+CheckBox/icons/unchecked = ExtResource("11_1g8da")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_4uxf2")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6gh7"]
+
+[sub_resource type="Theme" id="Theme_gg5dg"]
+OptionButton/font_sizes/font_size = 35
+OptionButton/fonts/font = ExtResource("7_fitc7")
+OptionButton/styles/focus = SubResource("StyleBoxEmpty_y6gh7")
+PopupMenu/constants/indent = 25
+PopupMenu/constants/v_separation = 15
+PopupMenu/font_sizes/font_size = 35
+PopupMenu/fonts/font = ExtResource("7_fitc7")
+PopupMenu/fonts/title_font = ExtResource("8_7ol3v")
+
+[node name="SettingsMenu" type="CanvasLayer"]
+script = ExtResource("1_jydv6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_4y83b")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 52
+theme_override_constants/margin_top = 52
+theme_override_constants/margin_right = 52
+theme_override_constants/margin_bottom = 52
+
+[node name="SettingsVBox" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 55
+
+[node name="TitleMargin" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 100
+
+[node name="PageTitlePanel" type="Panel" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/TitleMargin"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_k6rhi")
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/TitleMargin/PageTitlePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/TitleMargin/PageTitlePanel/CenterContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.819608, 0.666667, 0.223529, 1)
+theme_override_colors/font_shadow_color = Color(0.521569, 0.309804, 0.0705882, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_8rvon")
+theme_override_font_sizes/font_size = 36
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicHBox" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox"]
+layout_mode = 2
+
+[node name="MusicIcon" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/MusicHBox"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("4_2sp23")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/MusicHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 35
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/MusicHBox/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("5_lk41b")
+max_value = 1.0
+step = 0.001
+value = 1.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="SfxHBox" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox"]
+layout_mode = 2
+
+[node name="SfxIcon" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/SfxHBox"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+texture = ExtResource("5_6rydq")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/SfxHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 35
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/SfxHBox/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("5_lk41b")
+max_value = 1.0
+step = 0.001
+value = 1.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="GuideMargin" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_right = 70
+
+[node name="GuideHBox" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/GuideMargin"]
+layout_mode = 2
+
+[node name="GuideCheck" type="CheckBox" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/GuideMargin/GuideHBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_hvqxr")
+flat = true
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/GuideMargin/GuideHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_lk41b")
+text = "Show Guide Paths"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="FontSizeMargin" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_right = 35
+
+[node name="FontSizeHBox" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/FontSizeMargin"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/FontSizeMargin/FontSizeHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_lk41b")
+text = "Coding  Font  Size:"
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/FontSizeMargin/FontSizeHBox"]
+layout_mode = 2
+theme = SubResource("Theme_gg5dg")
+selected = 0
+allow_reselect = true
+item_count = 3
+popup/item_0/text = "Small"
+popup/item_1/text = "Medium"
+popup/item_1/id = 1
+popup/item_2/text = "Large"
+popup/item_2/id = 2
+
+[node name="MarginButtons" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_right = 60
+
+[node name="ButtonsVBox" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/MarginButtons"]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="LogoutButton" type="Button" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/MarginButtons/ButtonsVBox"]
+visible = false
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_lk41b")
+text = "Log Out of Account"
+
+[node name="ReturnButton" type="Button" parent="MarginContainer/Panel/MarginContainer/SettingsVBox/MarginButtons/ButtonsVBox"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_lk41b")
+text = "Close Settings"
+
+[connection signal="value_changed" from="MarginContainer/Panel/MarginContainer/SettingsVBox/MusicHBox/MarginContainer/HSlider" to="." method="_on_bgm_slider_value_changed"]
+[connection signal="value_changed" from="MarginContainer/Panel/MarginContainer/SettingsVBox/SfxHBox/MarginContainer/HSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="MarginContainer/Panel/MarginContainer/SettingsVBox/GuideMargin/GuideHBox/GuideCheck" to="." method="_on_guide_check_pressed"]
+[connection signal="item_selected" from="MarginContainer/Panel/MarginContainer/SettingsVBox/FontSizeMargin/FontSizeHBox/OptionButton" to="." method="_on_code_font_size_selected"]
+[connection signal="button_up" from="MarginContainer/Panel/MarginContainer/SettingsVBox/MarginButtons/ButtonsVBox/ReturnButton" to="." method="_on_return_button_up"]

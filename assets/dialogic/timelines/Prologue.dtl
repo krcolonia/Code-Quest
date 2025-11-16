@@ -1,0 +1,15 @@
+[i]Today marks the beginning of a new adventure for you, young one...[/i]
+[i]An adventure that will require your wits... [pause=0.5]your courage... [pause=0.5]and a thirst for knowledge.[/i]
+[i]The PyTome of Knowledge has been stirred.[pause=0.5][br][br]Its pages whispering secrets only the worthy can uncover...[/i]
+[i]Beware young one! There are those who wish to wield its power for darkness...[/i]
+[i]Will you be up to the task? Only you can answer that, [b]{user_var.username}[/b]![/i]
+if {user_var.gender} == "Female":
+	join MC_Female 0
+else:
+	join MC_Male 0
+MainCharacter_Name: [i]*yawn*[/i] What time is it...?
+MainCharacter_Name: I gotta get to the [b]Academe[/b], Today's my first day as an apprentice there!
+if {user_var.gender} == "Female":
+	leave MC_Female
+else:
+	leave MC_Male

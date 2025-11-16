@@ -1,0 +1,105 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=15 format=3 uid="uid://dh6dakmkq0sc7"]
+
+[ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://assets/dialogic_styles/CustomDialogueTheme/custom_dialogue_theme.tscn" id="1_wcjcu"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_4ov2h"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="3_oqx3h"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://assets/dialogic_styles/CustomDialogueTheme/CustomPortrait/5Portraits/custom_vn_portrait_layer.tscn" id="4_pwbfg"]
+[ext_resource type="PackedScene" uid="uid://cpakkwkjiyiud" path="res://assets/dialogic_styles/CustomDialogueTheme/VisualNovelTextbox/custom_vn_textbox_layer.tscn" id="5_bv7vw"]
+[ext_resource type="PackedScene" uid="uid://co7nok0mvff4o" path="res://assets/dialogic_styles/CustomDialogueTheme/CustomDialogueChoices/CenteredChoices/custom_vn_choice_layer.tscn" id="6_6sn82"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://assets/dialogic_styles/CustomDialogueTheme/CustomGlossaryTheme/PopupGlossary/custom_glossary_popup_layer.tscn" id="7_tye5o"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="8_h5k8j"]
+
+[sub_resource type="Resource" id="Resource_xa3jr"]
+script = ExtResource("2_4ov2h")
+scene = ExtResource("1_wcjcu")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_g3jma"]
+script = ExtResource("2_4ov2h")
+scene = ExtResource("3_oqx3h")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_5b72m"]
+script = ExtResource("2_4ov2h")
+scene = ExtResource("4_pwbfg")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_rxrq3"]
+script = ExtResource("2_4ov2h")
+scene = ExtResource("5_bv7vw")
+overrides = {
+"bold_font": "\"res://assets/fonts/Minecraft-Bold.otf\"",
+"bold_italics_font": "\"res://assets/fonts/Minecraft-BoldItalic.otf\"",
+"box_color_custom": "Color(1, 1, 1, 1)",
+"box_color_use_global": "false",
+"box_panel": "\"res://assets/dialogic_styles/CustomDialogueTheme/DialogueStyle.tres\"",
+"box_size": "Vector2(700, 450)",
+"italics_font": "\"res://assets/fonts/Minecraft-Italic.otf\"",
+"name_label_alignment": "1",
+"name_label_box_modulate": "Color(1, 1, 1, 1)",
+"name_label_box_offset": "Vector2(-50, -95)",
+"name_label_box_panel": "\"res://assets/dialogic_styles/CustomDialogueTheme/DialogueNameStyle.tres\"",
+"name_label_box_use_global_color": "false",
+"name_label_custom_color": "Color(0, 0, 0, 1)",
+"name_label_font": "\"res://assets/fonts/Minecraft-Regular.otf\"",
+"name_label_use_character_color": "false",
+"name_label_use_global_color": "false",
+"name_label_use_global_font": "false",
+"normal_font": "\"res://assets/fonts/Minecraft-Regular.otf\"",
+"text_custom_color": "Color(0, 0, 0, 1)",
+"text_size": "32.0",
+"text_use_global_color": "false",
+"text_use_global_font": "false"
+}
+
+[sub_resource type="Resource" id="Resource_ib0j8"]
+script = ExtResource("2_4ov2h")
+scene = ExtResource("6_6sn82")
+overrides = {
+"boxes_min_size": "Vector2(0, 110)",
+"boxes_stylebox_disabled": "\"res://assets/dialogic_styles/CustomDialogueTheme/DialogueChoice_normal.tres\"",
+"boxes_stylebox_focused": "\"res://assets/dialogic_styles/EmptyStyle.tres\"",
+"boxes_stylebox_hovered": "\"res://assets/dialogic_styles/CustomDialogueTheme/DialogueChoice_normal.tres\"",
+"boxes_stylebox_normal": "\"res://assets/dialogic_styles/CustomDialogueTheme/DialogueChoice_normal.tres\"",
+"boxes_stylebox_pressed": "\"res://assets/dialogic_styles/CustomDialogueTheme/DialogueChoice_pressed.tres\"",
+"font_custom": "\"res://assets/fonts/Minecraft-Regular.otf\"",
+"font_size_custom": "32.0",
+"font_size_use_global": "false",
+"font_use_global": "false",
+"text_color_custom": "Color(0, 0, 0, 0.647059)",
+"text_color_disabled": "Color(0, 0, 0, 0.647059)",
+"text_color_focused": "Color(0, 0, 0, 0.647059)",
+"text_color_hovered": "Color(0, 0, 0, 0.647059)",
+"text_color_pressed": "Color(0, 0, 0, 0.647059)",
+"text_color_use_global": "false"
+}
+
+[sub_resource type="Resource" id="Resource_jcu1h"]
+script = ExtResource("2_4ov2h")
+scene = ExtResource("7_tye5o")
+overrides = {
+"box_base_modulate": "Color(0, 0, 0, 1)",
+"box_modulate_mode": "2",
+"extra_color_mode": "0",
+"extra_custom_color": "Color(0, 0, 0, 1)",
+"text_color_mode": "0",
+"text_custom_color": "Color(0, 0, 0, 1)",
+"title_color_mode": "0",
+"title_custom_color": "Color(0, 0, 0, 1)"
+}
+
+[resource]
+script = ExtResource("8_h5k8j")
+name = "DialogueTheme"
+layer_list = Array[String](["10", "11", "12", "13", "14"])
+layer_info = {
+"": SubResource("Resource_xa3jr"),
+"10": SubResource("Resource_g3jma"),
+"11": SubResource("Resource_5b72m"),
+"12": SubResource("Resource_rxrq3"),
+"13": SubResource("Resource_ib0j8"),
+"14": SubResource("Resource_jcu1h")
+}
+base_overrides = {}
+layers = Array[ExtResource("2_4ov2h")]([])
+metadata/_latest_layer = ""

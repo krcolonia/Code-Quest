@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dlkub37sg3c7h"
+path="res://.godot/imported/test_button2.aseprite-0c907c3d66b24ee503ebcb74fa9c743f.res"
+
+[deps]
+
+source_file="res://assets/ui/buttons/test_button2.aseprite"
+dest_files=["res://.godot/imported/test_button2.aseprite-0c907c3d66b24ee503ebcb74fa9c743f.res"]
+
+[params]
+

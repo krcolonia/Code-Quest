@@ -1,0 +1,247 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Code Quest"
+config/version="1.0.0"
+run/main_scene="res://scenes/ui/SplashScreen.tscn"
+config/quit_on_go_back=false
+config/features=PackedStringArray("4.3", "GL Compatibility")
+run/max_fps=60
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
+config/icon="res://assets/CodeQuest-Logo.png"
+
+[autoload]
+
+AssetPreloader="*res://scripts/autoload/AssetPreloader.gd"
+SceneManager="*res://scenes/ui/SceneManager.tscn"
+AlertDialog="*res://scenes/ui/AlertDialog.tscn"
+InteractionManager="*res://scenes/interaction/interaction_manager.tscn"
+Settings="*res://scripts/autoload/Settings.gd"
+Supabase="*res://scripts/backend/Supabase.gd"
+Firebase="*res://scripts/backend/Firebase.gd"
+JDoodle="*res://scripts/backend/JDoodle.gd"
+CodeX="*res://scripts/backend/CodeX.gd"
+Music="*res://scenes/music/Music.tscn"
+ApiKey="*res://scripts/autoload/ApiKey.gd"
+PlayerGlobalVars="*res://scripts/player/PlayerGlobalVars.gd"
+SaveGameManager="*res://scenes/autoload/SaveGameManager.tscn"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
+
+[dialogic]
+
+directories/dch_directory={
+"ArchivistYara": "res://assets/dialogic/characters/ArchivistYara.dch",
+"ArtificerAmara": "res://assets/dialogic/characters/ArtificerAmara.dch",
+"BlacksmithGarrick": "res://assets/dialogic/characters/BlacksmithGarrick.dch",
+"ElderLorem": "res://assets/dialogic/characters/ElderLorem.dch",
+"ElderSeraphius": "res://assets/dialogic/characters/ElderSeraphius.dch",
+"ElderThalvin": "res://assets/dialogic/characters/ElderThalvin.dch",
+"Father": "res://assets/dialogic/characters/Father.dch",
+"Guard1": "res://assets/dialogic/characters/Guard1.dch",
+"Guard2": "res://assets/dialogic/characters/Guard2.dch",
+"Guard3": "res://assets/dialogic/characters/Guard3.dch",
+"LadyCirce": "res://assets/dialogic/characters/LadyCirce.dch",
+"LadyIndenta": "res://assets/dialogic/characters/LadyIndenta.dch",
+"MC_Female": "res://assets/dialogic/characters/MC_Female.dch",
+"MC_Male": "res://assets/dialogic/characters/MC_Male.dch",
+"MainCharacter_Name": "res://assets/dialogic/characters/MainCharacter_Name.dch",
+"MasterArno": "res://assets/dialogic/characters/MasterArno.dch",
+"Mother": "res://assets/dialogic/characters/Mother.dch",
+"Namdal": "res://assets/dialogic/characters/Namdal.dch",
+"SageOfReturn": "res://assets/dialogic/characters/SageOfReturn.dch",
+"ScribeTiber": "res://assets/dialogic/characters/ScribeTiber.dch",
+"SirMatheus": "res://assets/dialogic/characters/SirMatheus.dch",
+"Theraf": "res://assets/dialogic/characters/Theraf.dch"
+}
+directories/dtl_directory={
+"Academe_LessonsNotDone": "res://assets/dialogic/timelines/Academe_LessonsNotDone.dtl",
+"Chapter2Blocker": "res://assets/dialogic/timelines/Chapter2Blocker.dtl",
+"DemoLevel_Ending": "res://assets/dialogic/timelines/DemoLevel_Ending.dtl",
+"Guard_HasIdentifySeal": "res://assets/dialogic/timelines/Guard_HasIdentifySeal.dtl",
+"Guard_LeadUserAcademe": "res://assets/dialogic/timelines/Guard_LeadUserAcademe.dtl",
+"Guard_NoIdentifySeal": "res://assets/dialogic/timelines/Guard_NoIdentifySeal.dtl",
+"Lorem_Lesson": "res://assets/dialogic/timelines/Lorem_Lesson.dtl",
+"Mother_ExitHouse": "res://assets/dialogic/timelines/Mother_ExitHouse.dtl",
+"Mother_ExitTalk": "res://assets/dialogic/timelines/Mother_ExitTalk.dtl",
+"Mother_Interact": "res://assets/dialogic/timelines/Mother_Interact.dtl",
+"Mother_InteractAfterExit": "res://assets/dialogic/timelines/Mother_InteractAfterExit.dtl",
+"Mother_RoomDoor": "res://assets/dialogic/timelines/Mother_RoomDoor.dtl",
+"Namdal_IdentitySeal": "res://assets/dialogic/timelines/Namdal_IdentitySeal.dtl",
+"Namdal_IdentitySealDone": "res://assets/dialogic/timelines/Namdal_IdentitySealDone.dtl",
+"Namdal_Intro": "res://assets/dialogic/timelines/Namdal_Intro.dtl",
+"Namdal_LeaveNotChecked": "res://assets/dialogic/timelines/Namdal_LeaveNotChecked.dtl",
+"Namdal_LecternNotKnownYet": "res://assets/dialogic/timelines/Namdal_LecternNotKnownYet.dtl",
+"Namdal_NoSealYet": "res://assets/dialogic/timelines/Namdal_NoSealYet.dtl",
+"Namdal_NotDone": "res://assets/dialogic/timelines/Namdal_NotDone.dtl",
+"Namdal_SealCheck": "res://assets/dialogic/timelines/Namdal_SealCheck.dtl",
+"Namdal_TutCase": "res://assets/dialogic/timelines/Namdal_TutCase.dtl",
+"Namdal_TutCode": "res://assets/dialogic/timelines/Namdal_TutCode.dtl",
+"ProgramObject_AlreadyDone": "res://assets/dialogic/timelines/ProgramObject_AlreadyDone.dtl",
+"ProgramObject_NoLessonYet": "res://assets/dialogic/timelines/ProgramObject_NoLessonYet.dtl",
+"Prologue": "res://assets/dialogic/timelines/Prologue.dtl",
+"Replay_TutCase": "res://assets/dialogic/timelines/Replay_TutCase.dtl",
+"Replay_TutCode": "res://assets/dialogic/timelines/Replay_TutCode.dtl",
+"Seraphius_AfterItem1": "res://assets/dialogic/timelines/Seraphius_AfterItem1.dtl",
+"Seraphius_BeforeLesson": "res://assets/dialogic/timelines/Seraphius_BeforeLesson.dtl",
+"Seraphius_GoToThalvin": "res://assets/dialogic/timelines/Seraphius_GoToThalvin.dtl",
+"Seraphius_Intro": "res://assets/dialogic/timelines/Seraphius_Intro.dtl",
+"Seraphius_IntroLeave": "res://assets/dialogic/timelines/Seraphius_IntroLeave.dtl",
+"Seraphius_ItemDoneNotChecked": "res://assets/dialogic/timelines/Seraphius_ItemDoneNotChecked.dtl",
+"Seraphius_ItemNotDone": "res://assets/dialogic/timelines/Seraphius_ItemNotDone.dtl",
+"Seraphius_LessonRecall": "res://assets/dialogic/timelines/Seraphius_LessonRecall.dtl",
+"Seraphius_Outro": "res://assets/dialogic/timelines/Seraphius_Outro.dtl",
+"Seraphius_PrintingLesson": "res://assets/dialogic/timelines/Seraphius_PrintingLesson.dtl",
+"Seraphius_PrintingLessonCheck": "res://assets/dialogic/timelines/Seraphius_PrintingLessonCheck.dtl",
+"Seraphius_PrintingLessonDemo": "res://assets/dialogic/timelines/Seraphius_PrintingLessonDemo.dtl",
+"Seraphius_PrintingLessonDone": "res://assets/dialogic/timelines/Seraphius_PrintingLessonDone.dtl",
+"Seraphius_PrintingLessonNotDone": "res://assets/dialogic/timelines/Seraphius_PrintingLessonNotDone.dtl",
+"Seraphius_ReplayLesson": "res://assets/dialogic/timelines/Seraphius_ReplayLesson.dtl",
+"SouthTownBlockerDialogue": "res://assets/dialogic/timelines/SouthTownBlockerDialogue.dtl",
+"Thalvin_DataTypeLesson": "res://assets/dialogic/timelines/Thalvin_DataTypeLesson.dtl",
+"Thalvin_Intro": "res://assets/dialogic/timelines/Thalvin_Intro.dtl",
+"Thalvin_LessonBlocker": "res://assets/dialogic/timelines/Thalvin_LessonBlocker.dtl",
+"Town_SignGuide": "res://assets/dialogic/timelines/Town_SignGuide.dtl",
+"scenes/Namdal_IdentitySealDone": "res://scenes/Namdal_IdentitySealDone.dtl"
+}
+glossary/default_case_sensitive=true
+layout/style_list=["res://assets/dialogic_styles/CustomDialogueTheme/DialogueTheme.tres", "res://assets/dialogic_styles/TutorialDialog/TutorialDialogueStyle.tres"]
+layout/default_style="res://assets/dialogic_styles/CustomDialogueTheme/DialogueTheme.tres"
+variables={
+"user_var": {
+"gender": "Male",
+"username": "MC Name"
+}
+}
+text/letter_speed=0.03
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+choices/autofocus_first=false
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+directories/letter_speed=0.01
+history/simple_history_enabled=true
+timer/process_in_physics=false
+choices/hotkey_behaviour=0
+text/autoadvance_ignored_characters={
+".": null
+}
+glossary/glossary_files=[]
+extensions_folder="res://addons/dialogic_additions"
+text/autocolor_names=true
+glossary/default_color=Color(0, 0, 0, 1)
+audio/max_channels=4.0
+animations/cross_fade_default_length=0.5
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/size/window_width_override=480
+window/size/window_height_override=854
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/per_pixel_transparency/allowed=true
+window/handheld/orientation=1
+window/vsync/vsync_mode=0
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/Todo_Manager/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/monitor_overlay/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://scenes/": "blue",
+"res://scripts/": "purple"
+}
+
+[global_group]
+
+ui=""
+player_collision=""
+player=""
+coding="Group for nodes that have to do with the coding functionality"
+npc=""
+
+[input]
+
+ui_select={
+"deadzone": 0.5,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
+ui_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+ui_interact={
+"deadzone": 0.5,
+"events": []
+}
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+, null]
+}
+ui_sprint={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+anti_aliasing/screen_space_roughness_limiter/enabled=false
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

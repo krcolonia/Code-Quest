@@ -1,0 +1,5 @@
+ElderSeraphius: Okay everyone, settle down now!
+join ElderSeraphius 0
+ElderSeraphius: Before we begin our lesson, let us first greet our new apprentice, {user_var.username}!
+ElderSeraphius: Now, let us begin our lesson for today.[br][br][pause=0.5]We will be using Python to cast spells that we can use to communicate with the world! [pause=0.5][br][br]How, you may ask?
+ElderSeraphius: By casting and making use of the [b]'print()'[/b] function of Python![br][br][pause=0.5]Allow me to demonstrate!

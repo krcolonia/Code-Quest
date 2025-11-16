@@ -1,0 +1,456 @@
+[gd_scene load_steps=37 format=3 uid="uid://dqytscp3we10w"]
+
+[ext_resource type="Script" path="res://scripts/menus/TitleScreen.gd" id="1_lkkhx"]
+[ext_resource type="Texture2D" uid="uid://d3fdmf755ixsf" path="res://assets/background/MenuBG.png" id="2_uwagv"]
+[ext_resource type="Texture2D" uid="uid://1w4ck4sxfvgw" path="res://assets/fx/Leaves-Sheet.png" id="3_ft7ib"]
+[ext_resource type="Texture2D" uid="uid://bnsajq482nhml" path="res://assets/ui/NewGameTitle.png" id="4_yixcq"]
+[ext_resource type="FontFile" uid="uid://bgy5jtbhxp65x" path="res://assets/fonts/AtlantisText-Bold.ttf" id="5_171kb"]
+[ext_resource type="FontFile" uid="uid://dn8jthylka01q" path="res://assets/fonts/AtlantisHeadline-Bold.ttf" id="6_555gf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7slh"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt02h"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hkff"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0by4"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kdw3"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(0, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4m7n"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(150, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81p1q"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(300, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi5cw"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(450, 150, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qa78"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(0, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t71gj"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(150, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbeea"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(300, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1js0v"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(450, 300, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wggu"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(0, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfbrc"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(150, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_718i1"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(300, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wblkm"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(450, 450, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqljp"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(0, 600, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msfb7"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(150, 600, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_278gk"]
+atlas = ExtResource("3_ft7ib")
+region = Rect2(300, 600, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hmhy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7slh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt02h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hkff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0by4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kdw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4m7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81p1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vi5cw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qa78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t71gj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbeea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1js0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wggu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfbrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_718i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wblkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqljp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msfb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_278gk")
+}],
+"loop": true,
+"name": &"Leaf",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_wo35c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGCanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.4, 1.4)]
+}
+
+[sub_resource type="Animation" id="Animation_qko4j"]
+resource_name = "TitlePusle"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1.4, 1.4), Vector2(1.35, 1.35), Vector2(1.4, 1.4)]
+}
+
+[sub_resource type="Animation" id="Animation_gxahp"]
+resource_name = "fade_from_black"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGCanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_myxjy"]
+_data = {
+"RESET": SubResource("Animation_wo35c"),
+"TitlePulse": SubResource("Animation_qko4j"),
+"fade_from_black": SubResource("Animation_gxahp")
+}
+
+[sub_resource type="Animation" id="Animation_lvwwd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContinueContainer:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yt0bq"]
+resource_name = "label_pulse"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContinueContainer:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.985, 0.985), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m1vyf"]
+_data = {
+"RESET": SubResource("Animation_lvwwd"),
+"label_pulse": SubResource("Animation_yt0bq")
+}
+
+[sub_resource type="Animation" id="Animation_rijir"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGCanvasLayer/BGCanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InputLayer/InputModulate:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mwlnb"]
+resource_name = "fade_from_black"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGCanvasLayer/BGCanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InputLayer/InputModulate:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rryov"]
+_data = {
+"RESET": SubResource("Animation_rijir"),
+"fade_from_black": SubResource("Animation_mwlnb")
+}
+
+[node name="TitleScreen" type="CanvasLayer"]
+script = ExtResource("1_lkkhx")
+metadata/_edit_vertical_guides_ = [720.0, 360.0]
+
+[node name="BGCanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BG Image" type="TextureRect" parent="BGCanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_uwagv")
+expand_mode = 1
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimLeaves" type="AnimatedSprite2D" parent="BGCanvasLayer"]
+process_mode = 3
+texture_filter = 1
+scale = Vector2(4.8, 8.53333)
+sprite_frames = SubResource("SpriteFrames_0hmhy")
+animation = &"Leaf"
+autoplay = "Leaf"
+speed_scale = 1.75
+centered = false
+
+[node name="Title" type="Control" parent="BGCanvasLayer"]
+layout_mode = 3
+anchor_left = 0.5
+anchor_top = 0.289
+anchor_right = 0.5
+anchor_bottom = 0.289
+offset_top = 0.0799866
+offset_bottom = 0.0799866
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.4, 1.4)
+
+[node name="TitleTexture" type="TextureRect" parent="BGCanvasLayer/Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_yixcq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VersionNumber" type="Label" parent="BGCanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -84.0
+offset_right = 122.0
+offset_bottom = -1.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("5_171kb")
+theme_override_font_sizes/font_size = 55
+text = "v0.10.4"
+
+[node name="BGCanvasModulate" type="CanvasModulate" parent="BGCanvasLayer"]
+visible = false
+color = Color(0, 0, 0, 1)
+
+[node name="TitleAnimation" type="AnimationPlayer" parent="BGCanvasLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_myxjy")
+}
+autoplay = "TitlePulse"
+
+[node name="InputLayer" type="CanvasLayer" parent="."]
+
+[node name="ContinueContainer" type="Control" parent="InputLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 310.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContinueLabel" type="Label" parent="InputLayer/ContinueContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.5
+offset_top = -35.0
+offset_right = 276.5
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("6_555gf")
+theme_override_font_sizes/font_size = 35
+text = "Tap  to  continue..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelAnim" type="AnimationPlayer" parent="InputLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_m1vyf")
+}
+autoplay = "label_pulse"
+
+[node name="ContinueButton" type="Button" parent="InputLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+action_mode = 0
+flat = true
+
+[node name="InputModulate" type="CanvasModulate" parent="InputLayer"]
+visible = false
+color = Color(0, 0, 0, 1)
+
+[node name="MainAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rryov")
+}
+
+[connection signal="pressed" from="InputLayer/ContinueButton" to="." method="_on_continue_button_pressed"]

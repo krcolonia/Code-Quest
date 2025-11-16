@@ -1,0 +1,8 @@
+ElderSeraphius: ... [pause=0.2]... [pause=0.2]... [pause=0.2]
+MainCharacter_Name: Uhm, excuse me? Are you Elder Seraphius?
+ElderSeraphius: ... [pause=0.2]Oh? You must be {user_var.username}...
+join ElderSeraphius 0
+ElderSeraphius: Welcome, young one, to the [b]Academe of Scribes[/b]! This is where your journey shall begin! As you now know, I am [b]Elder Seraphius[/b] one of the three elders residing here in the Academe.
+ElderSeraphius: Here in the Academe, we train those who are willing use the power of Python for good. I believe you've already met Namdal...?
+ElderSeraphius: He was an apprentice here much like you are now! Which is why he was able to teach you the basic uses of your journal.
+ElderSeraphius: Now, let us begin. Follow me young one...
