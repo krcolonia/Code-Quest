@@ -6,19 +6,38 @@ extends Node
 # ? this supabase class is based entirely off of the API documentation, and the supabase addon for godot made by fenix. I
 # ? was originally supposed to use that instead of coding my own implementation, but I was having problems with how the addon is setup.
 
-const config = {
+const _auth_endpoint := '/auth/v1'
+const _signup := _auth_endpoint+'/signup'
+const _signin := _auth_endpoint+'/token?grant_type=password'
+const _reset_password := _auth_endpoint+'/recover'
+const _logout := _auth_endpoint+'/logout'
+const _user := _auth_endpoint+'/user'
+
+const ENVIRONMENT_VARIABLES : String = 'supabase/config'
+var config = {
 	'supabaseUrl': '',
 	'supabaseKey': ''
 }
 
-const _auth_endpoint := '/auth/v1'
-const _signup_endpoint := _auth_endpoint+'/signup'
+func _ready() -> void:
+	if config.key != "" and config.url != "":
+		pass
+	else:
+		var env = ConfigFile.new()
+		var err = env.load("res://.env")
+		if err == OK:
+			for key in config.keys():
+				var value: String = env.get_value(ENVIRONMENT_VARIABLES, key, '')
+				if value == '':
+					printerr('%s has an invalid value.' % key)
+				else:
+					config[key] = value
+	pass
 
 func _get_request_headers() -> PackedStringArray:
 	return PackedStringArray([
 		"Content Type: application/json",
 		"Accept: application/json",
-		"Authorization: Bearer %s" % config.supabaseKey,
 		"apikey: %s" % config.supabaseKey
 	])
 
@@ -32,7 +51,7 @@ func sign_up(email: String, password: String, username: String, http: HTTPReques
 			'username': username
 		}
 	}
-	http.request(config.supabaseUrl + _signup_endpoint, _get_request_headers(), HTTPClient.METHOD_POST, JSON.stringify(body))
+	http.request(config.supabaseUrl + _signup, _get_request_headers(), HTTPClient.METHOD_POST, JSON.stringify(body))
 
 signal auth_request_signal
 
