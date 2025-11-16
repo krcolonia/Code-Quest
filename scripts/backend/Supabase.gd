@@ -6,21 +6,14 @@ extends Node
 # ? this supabase class is based entirely off of the API documentation, and the supabase addon for godot made by fenix. I
 # ? was originally supposed to use that instead of coding my own implementation, but I was having problems with how the addon is setup.
 
-const _auth_endpoint := '/auth/v1'
-const _signup := _auth_endpoint+'/signup'
-const _signin := _auth_endpoint+'/token?grant_type=password'
-const _reset_password := _auth_endpoint+'/recover'
-const _logout := _auth_endpoint+'/logout'
-const _user := _auth_endpoint+'/user'
-
 const ENVIRONMENT_VARIABLES : String = 'supabase/config'
-var config = {
+var config: Dictionary = {
 	'supabaseUrl': '',
 	'supabaseKey': ''
 }
 
 func _ready() -> void:
-	if config.key != "" and config.url != "":
+	if config.supabaseKey != "" and config.supabaseUrl != "":
 		pass
 	else:
 		var env = ConfigFile.new()
@@ -41,6 +34,15 @@ func _get_request_headers() -> PackedStringArray:
 		"apikey: %s" % config.supabaseKey
 	])
 
+# ? Authentication
+#region
+const _auth_endpoint := '/auth/v1'
+const _signup := _auth_endpoint+'/signup'
+const _signin := _auth_endpoint+'/token?grant_type=password'
+const _reset_password := _auth_endpoint+'/recover'
+const _logout := _auth_endpoint+'/logout'
+const _user := _auth_endpoint+'/user'
+
 func sign_up(email: String, password: String, username: String, http: HTTPRequest) -> void:
 	if !http.is_connected('request_completed', _on_auth_request_completed):
 		http.request_completed.connect(_on_auth_request_completed)
@@ -53,6 +55,15 @@ func sign_up(email: String, password: String, username: String, http: HTTPReques
 	}
 	http.request(config.supabaseUrl + _signup, _get_request_headers(), HTTPClient.METHOD_POST, JSON.stringify(body))
 
+func sign_in(email: String, password:String, http: HTTPRequest) -> void:
+	if !http.is_connected('request_completed', _on_auth_request_completed):
+		http.request_compelted.connect(_on_auth_request_completed)
+	var body := {
+		'email': email,
+		'password': password,
+	}
+	http.request(config.supabaseUrl + _signin, _get_request_headers(), HTTPClient.METHOD_POST, JSON.stringify(body))
+
 signal auth_request_signal
 
 func _on_auth_request_completed(_result: int, response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
@@ -63,3 +74,5 @@ func _on_auth_request_completed(_result: int, response_code: int, _headers: Pack
 		print('Response Code' + str(response_code))
 		print(json.msg.capitalize())
 	auth_request_signal.emit()
+#endregion
+
